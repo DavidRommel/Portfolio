@@ -42,7 +42,7 @@ Clicking this button executes the `Main` module from my macro.  The` Main()` pro
 module creates a new instance of the `SpliceReport` class module, validates that the 
 distribution splice report is valid, and if so parses it.
  
-```
+```vb
 Sub Main()
     Dim sp As New SpliceReport
     sp.OpenSpliceReport
@@ -61,7 +61,7 @@ End Sub
 Before exploring the `SpliceReport` class, I created another class named `Sheath`
 to store information about the individual sheaths.  This class just consists of 
 getter and setter procedures to store and retrieve various sheath parameters.
-```
+```vb
 Private m_name As String
 Private m_UUID As String
 Private m_StartEnclosure As String
@@ -128,7 +128,7 @@ when this class is instantiated.  The `OpenSpliceReport()` procedure displays a 
 and sets the `m_Path` and `m_SpliceReport` variables.  When the `SpliceReport` class is terminated, 
 I made sure to close the workbook containing the distribution splice report as well.  
 
-```
+```vb
 Private m_Path As String
 Private m_Sheaths As Collection 'Sheath objects
 Private m_SpliceReport As Workbook
@@ -179,7 +179,7 @@ if a valid Excel document was loaded, this procedure does some basic checking to
 ensure that cell A1 in each of the tabs contains the string *ENCLOSURE NAME*, which 
 should be the case for a valid distribution splice report.
 
-```
+```vb
 Function Validate() As Boolean
     'Function returns true if a valid distribution splice report was selected
     'Prevents errors from trying to parse an invalid document
@@ -225,7 +225,7 @@ objects are created and added to the `m_Sheaths` collection.  This procedure use
 procedures which will be explained in more detail later: `SheathInCollection()`, `CalcFiberCount()`, and 
 `ValidateSheathName()`.  Finally the results are displayed by calling the `DisplayResults()` procedure.
 
-```
+```vb
 Sub Parse()
     Dim ws As Worksheet, SheathObject As sheath
 
@@ -267,7 +267,7 @@ The `CalcFiberCount()` function is passed the row number that the sheath starts 
 the `Parse()` procedure.  The function then iterates downwards, and checks each cell until it either
 finds a new sheath, which would be filled the color orange `47871`, or a different section, which are filled 
 green `9498256`.
-```
+```vb
 Function CalcFiberCount(ws As Worksheet, RowNumber As Long) As Long
     'Calculates the number of fibers in the sheath
     Dim ReturnValue As Long, iterator As Long
@@ -314,7 +314,7 @@ as well.  This function uses the `FiberCount` variable, which was calculated in 
 as the identified starting and ending enclosure names, to confirm that the sheath name follows
 enterprise naming standards.  The `m_ValidName` variable for the sheath objects are set to either *TRUE* or
 *FALSE* in the `Parse()` procedure based on the results of this function.
-```
+```vb
 Function ValidateSheathName(SheathObject As sheath) As Boolean
     'Determine if naming follows enterprise naming
     Dim ReturnValue As Boolean, MSTCount As String
@@ -350,7 +350,7 @@ End Function
 The final procedure `DisplayResults()` creates a new workbook, displays information
 about all of the sheaths contained in the `m_Sheaths` collection, and formats everything.
 An example of the output can be found at the beginning of this document.
-```
+```vb
 Sub DisplayResults()
     'This sub-routine will display the sheath information in a new workbook
     Dim CurrentRow As Long, iterator As Long, ShadedRows As Boolean, wk As Workbook
