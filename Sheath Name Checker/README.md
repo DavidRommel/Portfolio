@@ -170,8 +170,8 @@ Sub OpenSpliceReport()
 
 End Sub
 ```
-
 <br>
+
 If you refer back to the `Main` module explained earlier, after the splice report 
 is opened it is then validated.  If the `Validate()` procedure returns *FALSE* the 
 macro ends, otherwise the distribution splice report is parsed.  Aside from checking
@@ -214,8 +214,8 @@ Function Validate() As Boolean
     Validate = ReturnValue
 End Function
 ```
-
 <br>
+
 If the file opened is valid, the `Parse()` procedure is then executed.  This procedure
 iterates through each of the splice enclosure tabs or worksheets in the workbook.  If you refer
 back to the previous image of a distribution splice report, the start of each sheath is filled 
@@ -261,8 +261,8 @@ Sub Parse()
 
 End Sub
 ```
-
 <br>
+
 The `CalcFiberCount()` function is passed the row number that the sheath starts on from
 the `Parse()` procedure.  The function then iterates downwards, and checks each cell until it either
 finds a new sheath, which would be filled the color orange `47871`, or a different section, which are filled 
@@ -284,8 +284,8 @@ Function CalcFiberCount(ws As Worksheet, RowNumber As Long) As Long
     CalcFiberCount = ReturnValue
 End Function
 ```
-
 <br>
+
 To avoid adding duplicate sheaths to the `m_Sheaths` collection, I created the `SheathInCollection()` function. 
 This checks to make sure a sheath with the same UUID, which is passed to this function as a string from
 the `Parse()` procedure, does not already exist in the collection.
@@ -305,8 +305,8 @@ Function SheathInCollection(SheathUUID As String) As Boolean
     SheathInCollection = ReturnValue
 End Function
 ```
-
 <br>
+
 The sheath name is validated in the `Parse()` procedure by passing it to the `ValidateSheathName()`
 function.  This function ensures that the sheath name follows enterprise naming standards.  MSTs are 
 a type of Fiber-To-The-Home tap, whose sheaths had a specific way of naming, so this function had to account for those
@@ -345,8 +345,8 @@ Function ValidateSheathName(SheathObject As sheath) As Boolean
     ValidateSheathName = ReturnValue
 End Function
 ```
-
 <br>
+
 The final procedure `DisplayResults()` creates a new workbook, displays information
 about all of the sheaths contained in the `m_Sheaths` collection, and formats everything.
 An example of the output can be found at the beginning of this document.
