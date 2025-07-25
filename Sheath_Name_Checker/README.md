@@ -289,7 +289,7 @@ End Function
 To avoid adding duplicate sheaths to the `m_Sheaths` collection, I created the `SheathInCollection()` function. 
 This checks to make sure a sheath with the same UUID, which is passed to this function as a string from
 the `Parse()` procedure, does not already exist in the collection.
-```
+```vb
 Function SheathInCollection(SheathUUID As String) As Boolean
     'Search for UUID in sheath collection
     Dim ReturnValue As Boolean, iterator As Long
