@@ -5,4 +5,6 @@ Welcome to my data analytics portfolio! This collection showcases my proficiency
 * [Food Recall Exploratory Data Analysis](https://github.com/DavidRommel/Portfolio/tree/main/Food_Recall_Exploratory_Data_Analysis//README.md)
 
 ## VBA Macros
-* [Sheath Name Checker](https://https://github.com/DavidRommel/Portfolio/tree/main/Sheath_Name_Checker/README.md)
+* [Sheath Name Checker](https://github.com/DavidRommel/Portfolio/blob/main/Sheath_Name_Checker/README.md)
+
+
