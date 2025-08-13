@@ -49,7 +49,7 @@ be added to the queue.  The parent of enclosure C will be set to B, and the pare
 of enclosure J will be set to L.  Enclosures B and L are then removed from the 
 queue and added to the visited list.
 
-![](/images/img_004.jpg)
+![](Images/img_004.jpg)
 
 The splice reports for enclosures C and J are then analyzed.  The splice report 
 for enclosure C contains three sheaths: one connecting enclosures C and B, another 
