@@ -79,10 +79,8 @@ H → Parent is J → Parent of J is L → Parent of L is A
 Note that enclosure H has two parents, C and J, which means there will at least be 
 two paths.  Every time there are multiple parents for one of the enclosures an 
 additional path object will be created.  Supporting multiple paths was probably 
-the most difficult part of designing this macro.  Refer to the class module PathFinder 
-and the sub routine CreatePath() for how I implemented this in VBA, by using nested 
-loops and creating objects dynamically.  The result of this algorithm is that the 
-two shortest paths between enclosures A and H are: A,B,C,H and A,L,J,H.
+the most difficult part of designing this macro.  The result of this algorithm is 
+that the two shortest paths between enclosures A and H are: A,B,C,H and A,L,J,H.
 
 A limitation of this algorithm is that it will only return the shortest path with 
 the least number of splices.  Fiber availability may require an alternate longer 
