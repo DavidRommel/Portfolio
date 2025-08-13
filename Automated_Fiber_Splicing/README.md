@@ -3,6 +3,7 @@
 **Date:** 2025/03/29
 
 <hr>
+
 ### Abstract
 This report is the accumulation of my personal research into adapting the Breadth 
 First Search algorithm to find the shortest path between two splice enclosures.  My 
@@ -18,7 +19,7 @@ a destination.  Below is a theoretical map with enclosures named A through L.  A
 lasso would be drawn around this region in Magellan, and a distribution splice report 
 would be created, which would include splicing information for these enclosures.
 
-![](/images/img_001.jpg)
+![](Images/img_001.jpg)
 
 For this example, say we wanted to find the shortest path between enclosures A 
 and H.  First the starting enclosure, enclosure A in this example, is added to 
@@ -26,7 +27,7 @@ the queue.  The algorithm will continue running until there is nothing left in
 the queue, or until the destination enclosure is reached.  For illustration 
 purposes, the enclosures will be represented by circles encompassing the enclosure name.
 
-![](/images/img_002.jpg)
+![](Images/img_002.jpg)
 
 From the distribution splice report, the splice report for enclosure A is analyzed.  The 
 splice report for enclosure A contains two sheaths: one connecting enclosures A 
@@ -38,7 +39,7 @@ a smaller circle encompassing the parent enclosure name.  The parents of B and L
 will be set to A.  A is then added to the visited list.  Enclosures on the visited 
 list will not be added back to the queue.
 
-![](/images/img_003.jpg)
+![](Images/img_003.jpg)
 
 The splice reports for enclosures B and L are then analyzed.  The splice report 
 for enclosure B contains two sheaths: one connecting enclosures B and A, and another 
@@ -63,7 +64,7 @@ enclosures H and K are added to the queue.  The parent of enclosure D is set to 
 the parent of enclosure H is set to C and J, and the parent of enclosure K is set 
 to J.  Enclosures C and J are then removed from the queue and added to the visited list.
 
-![](/images/img_005.jpg)
+![](Images/img_005.jpg)
 
 The algorithm can keep going until the queue is empty, or end at this point since 
 the goal was reached.  Note that enclosure H has two parents, C and J.  There will 
@@ -95,12 +96,12 @@ they will be displayed in separate worksheets of the newly created workbook.  If
 there are multiple sheaths connecting two enclosures they will be displayed on 
 separate lines, in parentheses, between the two enclosures.
 
-![](/images/img_006.jpg)
+![](Images/img_006.jpg)
 
 In the most recent version of the macro I added the capability to display 
 available fibers as well.
 
-![](/images/img_007.jpg)
+![](Images/img_007.jpg)
 
 The buffer sizes are calculated from the splice reports, and displayed as heavy 
 lines on the output.  The buffer sizes are all twelve for the three sheaths 
