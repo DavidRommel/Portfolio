@@ -1,4 +1,4 @@
-## Application Of The Breadth First \nSearch Algorithm For Fiber Splicing
+## Application Of The Breadth First Search Algorithm For Fiber Splicing
 >**Prepared by:** David Rommel  
 **Date:** 2025/03/29
 
