@@ -2,8 +2,6 @@
 >**Prepared by:** David Rommel  
 **Date:** 2025/03/29
 
-<hr>
-
 ### Abstract
 This report is the accumulation of my personal research into adapting the Breadth 
 First Search algorithm to find the shortest path between two splice enclosures.  My 
