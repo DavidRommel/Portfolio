@@ -3,8 +3,8 @@ Welcome to my data analytics portfolio! This collection showcases my proficiency
 
 --- 
 
-#### Data Analytics Projects
-* [Food Recall Exploratory Data Analysis](https://github.com/DavidRommel/Portfolio/tree/main/Food_Recall_Exploratory_Data_Analysis//README.md)
+#### Exploratory Data Analysis (EDA)
+* [openFDA Food Recalls](https://github.com/DavidRommel/Portfolio/tree/main/Food_Recall_Exploratory_Data_Analysis//README.md)
   > R
 * Denton County School Performance *(In Progress)*
   > SQL and Tableau
