@@ -6,7 +6,7 @@ a lot of time to check due to their scale.  Many of these projects would consist
 all of the plant for several hundred customers.  The splice enclosures and fiber sheaths had a
 particular naming convention that we were supposed to follow.  Quality checking this manually
 in the software was very time consuming since you would have to click on hundreds of sheaths to
-verify their naming.  The count was supposed to match the fiber count of the sheath and the two
+verify their naming.  The count was supposed to match the fiber count of the sheath, and the two
 enclosures that the sheath connects two were supposed to be a part of the naming as well.
 
 
@@ -416,4 +416,5 @@ I shared these macros with other designers, as well as my supervisor and manager
 production and fewer rejections for those who used them.  Seeing the benefits that these macros had,
 not only for me, but for other designers who I shared them with, led me to become more interested in
 data analysis, and explore it further as a possible career change.
+
 
