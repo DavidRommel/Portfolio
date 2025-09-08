@@ -1,6 +1,6 @@
 # Sheath Name Checker
 ## Overview of macro
-A significant part of my time when I worked at Spectrum was spent quality checking
+A significant part of my time when I worked at Charter Communications was spent quality checking
 other designers' projects.  Fiber-To-The-Home projects in particular required 
 a lot of time to check due to their scale.  Many of these projects would consist of designing 
 all of the plant for several hundred customers.  The splice enclosures and fiber sheaths had a
@@ -410,9 +410,10 @@ End Sub
 ## Conclusion
 This is one of several macros that I created to reduce time required to complete quality 
 checks, as well as to ensure my own designs did not contain mistakes.  I really enjoyed designing 
-and sharing these macros with others while working at Spectrum.  I was able to achieve a level of
+and sharing these macros with others while working at Charter Communications.  I was able to achieve a level of
 accuracy in my quality checks and design work that would not have been possible without using them.
 I shared these macros with other designers, as well as my supervisor and manager, which resulted in increased
 production and fewer rejections for those who used them.  Seeing the benefits that these macros had,
 not only for me, but for other designers who I shared them with, led me to become more interested in
 data analysis, and explore it further as a possible career change.
+
