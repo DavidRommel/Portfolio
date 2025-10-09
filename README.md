@@ -7,7 +7,7 @@ Welcome to my data analytics portfolio! This collection showcases my proficiency
 * [openFDA Food Recalls](https://github.com/DavidRommel/Portfolio/tree/main/Food_Recall_Exploratory_Data_Analysis//README.md)
   > R
 * Denton County School Performance *(In Progress)*
-  > SQL and Tableau
+  > Python
 
 #### Predictive Analytics & Machine Learning
 
