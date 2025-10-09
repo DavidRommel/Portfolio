@@ -6,10 +6,11 @@ Welcome to my data analytics portfolio! This collection showcases my proficiency
 #### Exploratory Data Analysis (EDA)
 * [openFDA Food Recalls](https://github.com/DavidRommel/Portfolio/tree/main/Food_Recall_Exploratory_Data_Analysis//README.md)
   > R
-* Denton County School Performance *(In Progress)*
-  > Python
 
 #### Predictive Analytics & Machine Learning
+* Denton County School Performance *(In Progress)*
+  > Python, Regression Analysis
+
 
 #### VBA Macros
 * [Sheath Name Checker](https://github.com/DavidRommel/Portfolio/blob/main/Sheath_Name_Checker/README.md)
