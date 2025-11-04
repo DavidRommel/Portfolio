@@ -2433,7 +2433,7 @@ I aggregated the staffing data by city, and then joined it with the census data.
 
 
 ```python
-# join staff dataset with high school information dataset for information on city school is located
+# join staff dataset with high school information dataset for information on city where school is located
 school_staff_information_subset = high_school_information.merge(school_staff_information, on = 'state_school_id', how = 'inner')
 
 # aggregate data by city
