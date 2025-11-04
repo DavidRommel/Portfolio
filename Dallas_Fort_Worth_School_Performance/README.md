@@ -2427,7 +2427,7 @@ model.summary()
 #### Add aggregated teacher variables in attempt to improve model
 ---
 
-In an attempt to get a higher adjusted R-squared value, I went back to the school staff dataset and used the two variables that I examined which had the strongest correlation with the overall score of high schools.  
+In an attempt to obtain a higher adjusted R-squared value, I went back to the school staff dataset and used the two variables that I examined which had the strongest correlation with the overall score of high schools.  
 
 I aggregated the staffing data by city, and then joined it with the census data.
 
