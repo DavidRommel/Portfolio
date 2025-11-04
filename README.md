@@ -8,7 +8,7 @@ Welcome to my data analytics portfolio! This collection showcases my proficiency
   > R
 
 #### Predictive Analytics & Machine Learning
-* Denton County School Performance *(In Progress)*
+* [Dallas-Fort Worth School Performance](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance/README.md)
   > Python, Regression Analysis
 
 
