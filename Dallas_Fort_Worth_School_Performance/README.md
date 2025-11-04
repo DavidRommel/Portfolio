@@ -2808,7 +2808,7 @@ For my final regression model I used the following independent predictor variabl
 * The percentage of teachers with master's degrees employed at the high schools
 * The percentage of teachers with 11-20 years of experience employed at the high schools
 
-This model was able to predict 50.9% of the variance in the average high school scores for the cities.
+This model was able to explain 50.9% of the variance in the average high school scores for the cities.
 
 The following cities were at the bottom-10, with their high schools under-performing what the model predicted.
 * Little Elm, Crowley, Lewisville, Justin, Colleyville, Lake Worth, Richardson, Kennedale, Lancaster, and Fort Worth
