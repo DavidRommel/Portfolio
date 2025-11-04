@@ -2590,7 +2590,7 @@ plt.show()
 
 **Linearity Assumption**
 
-None of the scatter-plots really showed a clear linear relationship between the independent variable and a high schools overall score.  Ideally the independent variables would have a higher correlation with the dependent variable.  For the sake of this case study though, I will say that the model passes this assumption.
+None of the scatter-plots really showed a clear linear relationship between the independent variable and a high school's overall score.  Ideally the independent variables would have a higher correlation with the dependent variable.  For the sake of this case study though, I will say that the model passes this assumption.
 
 **Model Validity**
 
