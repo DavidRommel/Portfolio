@@ -760,10 +760,7 @@ city_scores.head(10)
 </table>
 
 
-* When aggregated, 50-percent of the citys' average high school scores fall between 76 and 88.
-* The lowest score is 66, and the highest is 96.
-
-This seems to be a good range of values for analysis.
+When aggregated, 50-percent of the average high school scores for the cities fall between 76 and 88.  The lowest score is 66, and the highest is 96.  This seems to be a good range of values for analysis.
 
 
 ```python
