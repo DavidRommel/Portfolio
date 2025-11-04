@@ -5,7 +5,7 @@ Welcome to my data analytics portfolio! This collection showcases my proficiency
 
 #### Predictive Analytics & Machine Learning
 * [Dallas-Fort Worth School Performance](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance/README.md)
-  > Python, Regression Analysis
+  > Python, Multiple Regression Analysis
 
 
 #### Exploratory Data Analysis (EDA)
