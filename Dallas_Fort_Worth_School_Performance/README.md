@@ -578,7 +578,6 @@ Before moving on to census data, and analyzing school performance at a city leve
 
 ```python
 df_subset = df[['number_of_students', 'overall_score']].copy()
-df_subset
 df_subset[df_subset.columns] = df_subset[df_subset.columns].apply(pd.to_numeric, errors = 'coerce')
 ```
 
