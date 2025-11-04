@@ -844,7 +844,7 @@ After applying the formula to the dataset there was a good range of values, rang
 ```python
 diversity_index = []
 for i in range(household_income.shape[0]):
-    diversity_index.append(simpsons_diversity_index(household_income.iloc[i, 1:5].values))
+    diversity_index.append(simpsons_diversity_index(household_income.iloc[i, 1:4].values))
 household_income['income_diversity_index'] = diversity_index
 household_income['income_diversity_index'].describe()
 ```
