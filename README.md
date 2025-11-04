@@ -3,13 +3,14 @@ Welcome to my data analytics portfolio! This collection showcases my proficiency
 
 --- 
 
-#### Exploratory Data Analysis (EDA)
-* [openFDA Food Recalls](https://github.com/DavidRommel/Portfolio/tree/main/Food_Recall_Exploratory_Data_Analysis//README.md)
-  > R
-
 #### Predictive Analytics & Machine Learning
 * [Dallas-Fort Worth School Performance](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance/README.md)
   > Python, Regression Analysis
+
+
+#### Exploratory Data Analysis (EDA)
+* [openFDA Food Recalls](https://github.com/DavidRommel/Portfolio/tree/main/Food_Recall_Exploratory_Data_Analysis//README.md)
+  > R
 
 
 #### VBA Macros
