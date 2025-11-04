@@ -912,7 +912,7 @@ I joined this `household_income` dataset with the `city_scores` dataset, which c
 df = city_scores.merge(household_income, on = 'city', how = 'inner')
 ```
 
-The data does show a slight correlation to support my initial hypothesis, that cities with a more diverse distribution of household incomes have a lower overall score for their high schools.  There is not as much of a linear relationship as I was initially hoping for though.
+The data does show a slight correlation to support my initial hypothesis, that cities with a more diverse distribution of household incomes have a lower average overall score for their high schools.  There is not as much of a linear relationship as I was initially hoping for though.
 
 The correlation matrix shows a very low correlation between these two variables.  The household income distribution of a city is not as strong of a predictor of high school performance as I initially thought.
 
