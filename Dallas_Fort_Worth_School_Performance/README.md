@@ -419,8 +419,8 @@ model.summary()
 <tr>
   <th>Kurtosis:</th>      <td> 2.454</td> <th>  Cond. No.          </th> <td>    145.</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.  
+<br/><br/>
 
 
 #### Analyzing teachers' education and school performance
@@ -534,9 +534,8 @@ model.summary()
 <tr>
   <th>Kurtosis:</th>      <td> 2.744</td> <th>  Cond. No.          </th> <td>    124.</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-
-
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.  
+<br/><br/>
 
 #### Analyzing teachers' experience and school performance
 ---
@@ -666,9 +665,8 @@ model.summary()
 <tr>
   <th>Kurtosis:</th>      <td> 2.382</td> <th>  Cond. No.          </th> <td>4.18e+03</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 4.18e+03. This might indicate that there are<br/>strong multicollinearity or other numerical problems.
-
-
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 4.18e+03. This might indicate that there are<br/>strong multicollinearity or other numerical problems.  
+<br/><br/>
 
 ### Analyzing how socioeconomic factors impact school performance
 ---
@@ -1066,9 +1064,8 @@ model.summary()
 <tr>
   <th>Kurtosis:</th>      <td> 3.055</td> <th>  Cond. No.          </th> <td>    59.1</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-
-
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.  
+<br/><br/>
 
 Even though there isn't really a clear linear relationship, between the average overall score of the high schools in a city and the percentage of people who earn less than \$50,000, I decided to check if the model fulfilled the other linear regression assumptions anyways.
 
@@ -1506,9 +1503,8 @@ model.summary()
 <tr>
   <th>Kurtosis:</th>      <td> 3.054</td> <th>  Cond. No.          </th> <td>4.83e+03</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 4.83e+03. This might indicate that there are<br/>strong multicollinearity or other numerical problems.
-
-
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 4.83e+03. This might indicate that there are<br/>strong multicollinearity or other numerical problems.  
+<br/><br/>
 
 **Normality Assumption**  
 
@@ -1813,9 +1809,8 @@ model.summary()
 <tr>
   <th>Kurtosis:</th>      <td> 2.849</td> <th>  Cond. No.          </th> <td>    77.4</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-
-
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.  
+<br/><br/>
 
 **Model Assumptions**  
 
@@ -1964,9 +1959,8 @@ model.summary()
 <tr>
   <th>Kurtosis:</th>      <td> 3.080</td> <th>  Cond. No.          </th> <td>    118.</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-
-
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.  
+<br/><br/>
 
 **Model Assumptions**  
 
@@ -2114,9 +2108,8 @@ model.summary()
 <tr>
   <th>Kurtosis:</th>      <td> 2.908</td> <th>  Cond. No.          </th> <td>    427.</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-
-
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.  
+<br/><br/>
 
 **Model Assumptions**  
 
@@ -2428,9 +2421,8 @@ model.summary()
 <tr>
   <th>Kurtosis:</th>      <td> 3.406</td> <th>  Cond. No.          </th> <td>    124.</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-
-
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.  
+<br/><br/>
 
 #### Add aggregated teacher variables in attempt to improve model
 ---
@@ -2537,9 +2529,8 @@ model.summary()
 <tr>
   <th>Kurtosis:</th>      <td> 3.398</td> <th>  Cond. No.          </th> <td>    559.</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-
-
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.  
+<br/><br/>
 
 **Model Assumptions**  
 
