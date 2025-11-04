@@ -1434,7 +1434,7 @@ plt.show()
     
 
 
-In the model below: 
+According to the model below: 
 * The R-squared value is the highest so far, indicating that the number of homes greater than \$500,000 in a city contributes to 23.9 percent of the variation in the average high school score for the city.
 * For every additional home that has a value of more than \$500,000 in the city, the average high school score in the city increases by 0.0015 points.
 * If there were no homes with a value of \$500,000 in the city, then the predicted average high school score would be 78.3876.
