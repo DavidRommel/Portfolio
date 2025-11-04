@@ -200,7 +200,7 @@ plt.show()
 
 To better visualize the correlation between the teacher's salaries and the overall scores of the high schools, I created a correlation matrix.  There ended up being very little correlation between teachers salaries and the overall score of the high schools.  
 
-It is strange to note that all of the correlations are negative, seeming to indicate that the more high schools pay their teachers the worse the schools overall scores are.  This is most noticeable for schools that pay the most to teachers with more than 30-years of experience.  If you look at the scatter-plot above, in the second row and third column, there is an outlier that pays teachers with 30-years of experience over \\$120,000 and the schools overall score is around 50.  There is another data point that only pays them \\$20,000 but somehow had a score in the high 90s.  If those two outliers were removed the correlation between these two variables would be far closer to zero.
+It is strange to note that all of the correlations are negative, seeming to indicate that the more high schools pay their teachers the worse the schools overall scores are.  This is most noticeable for schools that pay the most to teachers with more than 30-years of experience.  If you look at the scatter-plot above, in the second row and third column, there is an outlier that pays teachers with 30-years of experience over \$120,000 and the schools overall score is around 50.  There is another data point that only pays them \$20,000 but somehow had a score in the high 90s.  If those two outliers were removed the correlation between these two variables would be far closer to zero.
 
 
 ```python
@@ -700,23 +700,6 @@ city_scores = (city_scores.groupby('city', observed = True, as_index = False)
 city_scores.head(10)
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -778,8 +761,6 @@ city_scores.head(10)
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 * When aggregated, 50-percent of the citys' average high school scores fall between 76 and 88.
@@ -816,7 +797,7 @@ My thoughts behind this relate to the practice of school redistricting, and how 
 The census data had too many income brackets for an appropriate analysis, so I grouped the fields into the following groups:
 * Households making under \$50,000
     * Lower class
-* Households making between \\$50,000 and \$149,999
+* Households making between \$50,000 and \$149,999
     * Middle class
 * Households making \$150,000 or more
     * Upper class
@@ -898,22 +879,6 @@ household_income[(household_income['income_diversity_index'] == household_income
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -944,8 +909,6 @@ household_income[(household_income['income_diversity_index'] == household_income
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 I joined this `household_income` dataset with the `city_scores` dataset, which contained the school overall scores aggregated by city.
@@ -974,11 +937,11 @@ plt.show()
     
 
 
-#### Analyzing how the percentage of households that earn less than \\$50,000 correlates to school performance
+#### Analyzing how the percentage of households that earn less than \$50,000 correlates to school performance
 ---
-Continuing with the topic of household incomes, I next decided to explore whether there was any correlation between the percent of households earning less than \\$50,000 and the average overall score of the high schools in the cities.  
+Continuing with the topic of household incomes, I next decided to explore whether there was any correlation between the percent of households earning less than \$50,000 and the average overall score of the high schools in the cities.  
 
-The regression plot and correlation matrix both show a predictable negative correlation between these two variables.  As the percentage of people in a city who earn less than \\$50,000 increases, the high school scores for the city tend to decrease.
+The regression plot and correlation matrix both show a predictable negative correlation between these two variables.  As the percentage of people in a city who earn less than \$50,000 increases, the high school scores for the city tend to decrease.
 
 
 ```python
@@ -998,7 +961,7 @@ plt.show()
 
 
 One note of interest in the scatter-plot above is the city Farmersville.
-* They have over 50-percent of their population earning less than \\$50,000, yet still managed to have an average overall high school score in the high 80s.
+* They have over 50-percent of their population earning less than \$50,000, yet still managed to have an average overall high school score in the high 80s.
 * Even though the city being relatively small may explain how they are able to achieve such a high score, this city may be worth exploring further to understand why their high schools are performing better than they predictably should be.
 
 
@@ -1006,23 +969,6 @@ One note of interest in the scatter-plot above is the city Farmersville.
 df[df['under_50000_pct'] > 50]
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1049,14 +995,12 @@ df[df['under_50000_pct'] > 50]
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 When the regression is modeled:
-* About 10.4% of the variation in the high schools overall scores for a city can be attributed to the percentage of people earning less than \\$50,000 in the city.
-* For every one percent increase in the number of people earning less than \\$50,000, the average overall score of the high schools in the city decreases by roughly -0.2436.
-* If there were no individuals earning less than \\$50,000 in the city, then the average predicted overall score for the high schools in the city would be 87.3739.
+* About 10.4% of the variation in the high schools overall scores for a city can be attributed to the percentage of people earning less than \$50,000 in the city.
+* For every one percent increase in the number of people earning less than \$50,000, the average overall score of the high schools in the city decreases by roughly -0.2436.
+* If there were no individuals earning less than \$50,000 in the city, then the average predicted overall score for the high schools in the city would be 87.3739.
 
 
 ```python
@@ -1126,7 +1070,7 @@ model.summary()
 
 
 
-Even though there isn't really a clear linear relationship, between the average overall score of the high schools in a city and the percentage of people who earn less than \\$50,000, I decided to check if the model fulfilled the other linear regression assumptions anyways.
+Even though there isn't really a clear linear relationship, between the average overall score of the high schools in a city and the percentage of people who earn less than \$50,000, I decided to check if the model fulfilled the other linear regression assumptions anyways.
 
 **Normality Assumption**  
 * The residuals from the model appear to be approximately normally distributed based on the histogram of the residuals and the Quantile-Quantile plot of the residuals.
@@ -1176,7 +1120,7 @@ Even though ideally there should be more correlation between the two variables, 
 
 **Predicting under-performing schools**  
 
-This simple model could be used to predict schools that are under-performing.  The model could be used to predict what the average overall score of the high schools in the cities should be, based on the percentage of people earning less than \\$50,000.  The predicted score could then be subtracted from the actual score, to identify the amount that high school performance in a city differed from what the model predicted it should be.  This could allow us to account for the economic inequality between cities, and allow for better comparisons of school performance across different cities.
+This simple model could be used to predict schools that are under-performing.  The model could be used to predict what the average overall score of the high schools in the cities should be, based on the percentage of people earning less than \$50,000.  The predicted score could then be subtracted from the actual score, to identify the amount that high school performance in a city differed from what the model predicted it should be.  This could allow us to account for the economic inequality between cities, and allow for better comparisons of school performance across different cities.
 
 
 ```python
@@ -1193,22 +1137,6 @@ df.sort_values(by = ['score_difference'])[['city', 'under_50000_pct', 'overall_s
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1303,11 +1231,9 @@ df.sort_values(by = ['score_difference'])[['city', 'under_50000_pct', 'overall_s
     </tr>
   </tbody>
 </table>
-</div>
 
 
-
-These would be the top 10 **highest** performing cities, while accounting for the percentage of individuals earning less than \\$50,000.
+These would be the top 10 **highest** performing cities, while accounting for the percentage of individuals earning less than \$50,000.
 
 
 ```python
@@ -1316,22 +1242,6 @@ df.sort_values(by = ['score_difference'], ascending = False)[['city', 'under_500
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1426,23 +1336,21 @@ df.sort_values(by = ['score_difference'], ascending = False)[['city', 'under_500
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 **Model accuracy**  
 
-Given that the percentage of individuals earning less than \\$50,000 only accounted for 10.4 percent of the variation in the average overall high school score for the cities, it probably would not be fair to use this model to gauge school performance.
+Given that the percentage of individuals earning less than \$50,000 only accounted for 10.4 percent of the variation in the average overall high school score for the cities, it probably would not be fair to use this model to gauge school performance.
 
 #### Analyzing how housing prices correlates to school performance
 ---
 A socioeconomic factor related to household income, would be the value of homes in a city.  It would make sense to assume that the more expensive homes there are in an area, the better the schooling should be.
 
 Since there were too many housing price categories in the census data for a meaningful analysis, I decided to group them into the following fields.
-* Entry Level: Below \\$300,000
-* Mid Price: \\$300,000 to \\$500,000
-* High Price: \\$500,000 to \\$750,000
-* Luxury: Above \\$750,000 
+* Entry Level: Below \$300,000
+* Mid Price: \$300,000 to \$500,000
+* High Price: \$500,000 to \$750,000
+* Luxury: Above \$750,000 
 
 
 ```python
@@ -1496,7 +1404,7 @@ value_of_owner_occupied_housing_units = value_of_owner_occupied_housing_units[['
 df = city_scores.merge(value_of_owner_occupied_housing_units, on = 'city', how = 'inner')
 ```
 
-When I created a correlation matrix for these values, I noticed that the number of houses \\$500,000 and up in a city had the strongest positive correlation with high school scores among the variables examined so far.  Likewise the number of houses less than \\$300,000 in a city had a substantial negative correlation with high school scores.
+When I created a correlation matrix for these values, I noticed that the number of houses \$500,000 and up in a city had the strongest positive correlation with high school scores among the variables examined so far.  Likewise the number of houses less than \$300,000 in a city had a substantial negative correlation with high school scores.
 
 
 ```python
@@ -1510,7 +1418,7 @@ plt.show()
     
 
 
-I decided to combine the high-end and luxury house categories into a single field.  This category encompasses all houses in the city that are greater than \\$500,000.  This combined field showed the highest correlation with the high school scores thus far.
+I decided to combine the high-end and luxury house categories into a single field.  This category encompasses all houses in the city that are greater than \$500,000.  This combined field showed the highest correlation with the high school scores thus far.
 
 
 ```python
@@ -1530,9 +1438,9 @@ plt.show()
 
 
 In the model below: 
-* The R-squared value is the highest so far, indicating that the number of homes greater than \\$500,000 in a city contributes to 23.9 percent of the variation in the average high school score for the city.
-* For every additional home that has a value of more than \\$500,000 in the city, the average high school score in the city increases by 0.0015 points.
-* If there were no homes with a value of \\$500,000 in the city, then the predicted average high school score would be 78.3876.
+* The R-squared value is the highest so far, indicating that the number of homes greater than \$500,000 in a city contributes to 23.9 percent of the variation in the average high school score for the city.
+* For every additional home that has a value of more than \$500,000 in the city, the average high school score in the city increases by 0.0015 points.
+* If there were no homes with a value of \$500,000 in the city, then the predicted average high school score would be 78.3876.
 
 
 ```python
@@ -1646,7 +1554,7 @@ plt.show()
     
 
 
-The number of homes in a city with a value of more than \\$500,000 appears to be the strongest predictor so far for the city's average high school score.  This will be an ideal variable to use in a multiple regression model.  
+The number of homes in a city with a value of more than \$500,000 appears to be the strongest predictor so far for the city's average high school score.  This will be an ideal variable to use in a multiple regression model.  
 
 **Predicting under-performing schools**  
 
@@ -1663,22 +1571,6 @@ df.sort_values(by = ['score_difference']).head(10)
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1817,8 +1709,6 @@ df.sort_values(by = ['score_difference']).head(10)
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 #### Analyzing how the percentage of owners vs. renters of housing correlates to school performance
@@ -1967,7 +1857,7 @@ plt.show()
     
 
 
-This would be an interesting predictor variable to pair with the amount of houses greater than \\$500,000.  There might be multicollinearity between those two variables though, so the correlation between them will need to be checked.
+This would be an interesting predictor variable to pair with the amount of houses greater than \$500,000.  There might be multicollinearity between those two variables though, so the correlation between them will need to be checked.
 
 #### Analyzing how educational attainment correlates to school performance
 ---
@@ -2329,22 +2219,6 @@ df.head(10)
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2461,14 +2335,12 @@ df.head(10)
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 When examining many of the socioeconomic factors, unfortunately many of them are highly correlated with each other.  Using predictor variables that are too correlated with each other would violate the no multicollinearity assumption for multiple regression models.
 
-* The percentage of people with a bachelor's degree or higher is strongly correlated with the percentage of housing in the city over \\$500,000.
-* The percentage of married couples is also strongly correlated with the percentage of housing in the city over \\$500,000
+* The percentage of people with a bachelor's degree or higher is strongly correlated with the percentage of housing in the city over \$500,000.
+* The percentage of married couples is also strongly correlated with the percentage of housing in the city over \$500,000
 
 
 
@@ -2487,7 +2359,7 @@ For my model I decided to use the percentage of housing over $500,000 and the pe
 
 The R-squared value, in the model below, is higher than when only a single variable was used to predict the variance in the overall score of high schools.  Currently this model explains 32% of the variation in the overall score.
 
-For every one percent increase in houses over \\$500,000, holding other variables constant, you can expect the high school score to increase by 0.1203 points.  Likewise, for every one percent increase in renters, holding other variables constant, you can expect the school score to decrease by 0.1675 points.
+For every one percent increase in houses over \$500,000, holding other variables constant, you can expect the high school score to increase by 0.1203 points.  Likewise, for every one percent increase in renters, holding other variables constant, you can expect the school score to decrease by 0.1675 points.
 
 
 ```python
@@ -2739,7 +2611,7 @@ It would have been ideal to be able to explain more than 50-percent of the varia
 
 **Predicting school performance**  
 
-Using this model, I calculated what the model predicted the average high school overall score should be, while taking into account the percentage of housing over $500,000, the percentage of renters, the percentage of teachers with master's degrees, and the percentage of teachers with 11-20 years of experience.
+Using this model, I calculated what the model predicted the average high school overall score should be, while taking into account the percentage of housing over \$500,000, the percentage of renters, the percentage of teachers with master's degrees, and the percentage of teachers with 11-20 years of experience.
 
 
 ```python
@@ -2757,22 +2629,6 @@ df2.sort_values(by = ['score_difference'])[['city', 'overall_score', 'predicted_
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2856,8 +2712,6 @@ df2.sort_values(by = ['score_difference'])[['city', 'overall_score', 'predicted_
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 **Schools that performed better than expected**
@@ -2870,22 +2724,6 @@ df2.sort_values(by = ['score_difference'], ascending = False)[['city', 'overall_
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2969,14 +2807,12 @@ df2.sort_values(by = ['score_difference'], ascending = False)[['city', 'overall_
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 ### Summary
 ---
 For my final regression model I used the following independent predictor variables:
-* The percentage of houses over $500,000 in the city
+* The percentage of houses over \$500,000 in the city
 * The percentage of people renting housing in the city
 * The percentage of teachers with master's degrees employed at the high schools
 * The percentage of teachers with 11-20 years of experience employed at the high schools
@@ -3005,20 +2841,20 @@ Some other notes of interest gained through this case study are the following:
 * Many of the socioeconomic variables were highly correlated with each other, limiting which ones I could ultimately use in the regression model.
 
 The following socioeconomic variables showed a **positive** correlation with school performance:
-* The percentage of housing over \\$500,000
+* The percentage of housing over \$500,000
 * The percentage of people with a bachelor's degree or higher
 * The percentage of married couples
 
 The following socioeconomic variables showed a **negative** correlation with school performance:
-* The percentage of people with an income under \\$50,000
+* The percentage of people with an income under \$50,000
 * The percentage of people renting housing
 
 The percentage of married couples in a city were **positively** correlated with:
 * The percentage of people with a bachelor's degree or higher
-* The percentage of housing over \\$500,000
+* The percentage of housing over \$500,000
 
 The percentage of married couples in a city were **negatively** correlated with:
-* The percentage of people with an income under \\$50,000
+* The percentage of people with an income under \$50,000
 * The percentage of people renting housing
 
 **Next Steps**  
