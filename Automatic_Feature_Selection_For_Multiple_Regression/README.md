@@ -992,7 +992,7 @@ return_df
 </table>
 
 
-### Testing model
+### Testing the recommended model
 ---
 
 When the first combination is modeled, the `species` of an Iris plant accounts for 94.1% of the variation in `petal_length`.  
