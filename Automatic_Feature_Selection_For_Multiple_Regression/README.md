@@ -1088,7 +1088,7 @@ When boxplots of the different petal lengths grouped by `species` are plotted, t
 
 
 ```python
-sns.boxplot(data = df, y = 'petal_length', hue = 'species')
+sns.boxplot(data = df, x = 'species', y = 'petal_length', hue = 'species')
 plt.show()
 ```
 
