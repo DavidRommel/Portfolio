@@ -39,7 +39,11 @@ from pandas.api.types import is_numeric_dtype, is_categorical_dtype
 ```python
 def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     '''
-    Description
+    Calculates the optimal combination of independent predictor variables for a multiple
+    regression model.  Results are sorted by adjusted r-squared values.  The no multicollinearity
+    assumption is verified, by making sure that all independent variables for a combination are
+    correlated with each other by no more than a specified threshold.  Categorical independent
+    variables are supported through using hypothesis testing to determine dependence.
     
     Parameters
     ----------
