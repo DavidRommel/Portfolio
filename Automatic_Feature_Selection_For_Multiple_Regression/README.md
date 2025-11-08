@@ -1,5 +1,5 @@
 ## Automatic Feature Selection For Multiple Regression
----
+
 While I was working on the Dallas-Fort Worth School Performance case study, I wanted to devise an automated method of selecting the independent variables which would result in the highest adjusted r-squared value.  I could probably use lasso regression to accomplish this, but decided to try a brute force approach.  My function is rather CPU-intensive, since it creates regression models for each possible combination of the dependent variables.
 
 For example:
