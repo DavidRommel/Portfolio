@@ -4,8 +4,10 @@ Welcome to my data analytics portfolio! This collection showcases my proficiency
 --- 
 
 #### Predictive Analytics & Machine Learning
+* [Automatic Feature Selection For Multiple Regression](https://github.com/DavidRommel/Portfolio/blob/main/Automatic_Feature_Selection_For_Multiple_Regression/README.md)
+  > Python, Multiple Regression
 * [Dallas-Fort Worth School Performance](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance/README.md)
-  > Python, Multiple Regression Analysis
+  > Python, Multiple Regression
 
 
 #### Exploratory Data Analysis (EDA)
