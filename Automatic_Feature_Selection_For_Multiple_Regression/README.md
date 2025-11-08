@@ -496,8 +496,9 @@ This first section of the function checks for the following:
 * That the dependent variable is numerical
     * The return statement is commented out for this explaination
 * That the independent variables are either numerical or categorical
-
-It then checks the correlation of each of the independent variables with the dependent variable.  Independent variables whose correlation with the dependent variable is less than the `min_threshold` value, which has a default value of `0.4`, are dropped.  A warning is displayed for each of the variables that are dropped.  The `X` and `y` dataframes are combined into a single dataframe named `data` for use in the model creation later as well.
+* The `X` and `y` dataframes are combined into a single dataframe named `data`.  It then checks the correlation of each of the independent variables with the dependent variable.
+    * Independent variables whose correlation with the dependent variable is less than the `min_threshold` value, which has a default value of `0.4`, are dropped.
+    * A warning is displayed for each of the variables that are dropped.  
 
 Finally, a list containing all of the possible combinations between the independent variables is created.
 
