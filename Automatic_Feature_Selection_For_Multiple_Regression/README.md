@@ -995,7 +995,7 @@ return_df
 ### Testing the recommended model
 ---
 
-When the first combination is modeled, the `species` of an Iris plant accounts for 94.1% of the variation in `petal_length`.  
+When the first combination of variables is modeled, the `species` of an Iris plant accounts for 94.1% of the variation in `petal_length`.  
 
 Holding other variables constant:  
 * A `setosa` species is expected to have a petal length of `1.4620`
