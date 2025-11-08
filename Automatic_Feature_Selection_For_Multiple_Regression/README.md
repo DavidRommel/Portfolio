@@ -1080,9 +1080,8 @@ model.summary()
 <tr>
   <th>Kurtosis:</th>      <td> 3.894</td> <th>  Cond. No.          </th> <td>    3.73</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-
-
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.  
+<br/><br/>
 
 When boxplots of the different petal lengths grouped by `species` are plotted, this seems to back up the model results.  The `species` of an Iris plant is a strong predictor of its `petal_length`.
 
