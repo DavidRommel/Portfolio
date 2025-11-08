@@ -180,7 +180,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
 
 ### Testing Function
 ---
-Before taking a more in-depth look at the individual components of the `select_variables()` function, I first wanted to show a few examples of its usage using common practice datasets.
+Before taking a more in-depth look at the individual components of the `select_variables()` function, I first wanted to show a few examples of using it with common practice datasets.
 
 In the `diamonds` dataset, all of the independent predictor variables were strongly correlated with each other.  The hypothesis tests for all of the combinations involving categorical variables resulted in a p-value of less than 0.05, indicating they were likely correlated.  Two of the independent variables, `depth` and `table`, were dropped because they had a correlation of less than 0.4 with the dependent variable, `price`.  The best variable to use for predicting `price` was determined to be the `carat` variable.
 
