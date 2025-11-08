@@ -1,11 +1,11 @@
 ## Automatic Feature Selection For Multiple Regression
 
-While I was working on the [Dallas-Fort Worth School Performance](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance/README.md) case study, I thought about how to devise an automated method of selecting the independent variables which would result in the highest adjusted r-squared value.  I could probably use lasso regression to accomplish this, but decided to try a brute force approach.  My function is rather CPU-intensive, since it creates regression models for each possible combination of the dependent variables.
+While I was working on the [Dallas-Fort Worth School Performance](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance/README.md) case study, I thought about how to devise an automated method of selecting the independent variables which would result in the highest adjusted r-squared value.  I could probably use lasso regression to accomplish this, but decided to try a brute force approach.  My function is rather CPU-intensive, since it creates regression models for each possible combination of the independent variables.
 
 For example:
-* 3 possible dependent variables will result in 6 combinations
-* 5 possible dependent variables will result in 30 combinations
-* 10 possible dependent variables will result in 1022 combinations
+* 3 possible independent variables will result in 6 combinations
+* 5 possible independent variables will result in 30 combinations
+* 10 possible independent variables will result in 1022 combinations
 
 For each of those combinations, a regression model is created and the adjusted r-squared value is calculated, then the correlation between each of the pairs of independent predictor variables is also calculated.  This can result in rather long processing times when you have many predictor variables.  I added progress indicators to give an indication of how much time is remaining for each of those proceedures.  It would take a substantial amount of time to calculate results for a dataset with many predictor variables though.
 
