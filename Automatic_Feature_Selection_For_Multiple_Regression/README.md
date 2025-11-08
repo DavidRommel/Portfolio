@@ -43,7 +43,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     regression model.  Results are sorted by adjusted r-squared values.  The no multicollinearity
     assumption is verified, by making sure that all independent variables for a combination are
     correlated with each other by no more than a specified threshold.  Categorical independent
-    variables are supported through using hypothesis testing to determine dependence.
+    variables are supported through using hypothesis testing to determine interdependence.
     
     Parameters
     ----------
