@@ -126,7 +126,6 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     
     # sort results from highest adjusted r-squared value to the lowest
     result_df = result_df.sort_values(by = ['r_squared'], ascending = False).reset_index(drop = True)
-
     
     # calculate the correlation between each independent variable for each formula row
     print('Calculating correlation between independent variables...')
