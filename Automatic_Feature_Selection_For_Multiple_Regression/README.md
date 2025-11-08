@@ -992,22 +992,12 @@ return_df
 </table>
 
 
-```python
-df['species'].value_counts()
-```
+### Testing model
+---
 
+When the first combination is modeled, the `species` of an Iris plant accounts for 94.1% of the variation in `petal_length`.  
 
-
-
-    species
-    setosa        50
-    versicolor    50
-    virginica     50
-    Name: count, dtype: int64
-
-
-
-When the first combination is modeled, the `species` of an Iris plant accounts for 94.1% of the variation in `petal_length`.  Holding other variables constant:  
+Holding other variables constant:  
 * A `setosa` species is expected to have a petal length of `1.4620`
 * A `versicolor` species is expected to have a petal length of `2.7980` more than a `setosa`
     * 1.4620 + 2.7980 = `4.26`
