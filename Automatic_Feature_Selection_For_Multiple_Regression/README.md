@@ -573,14 +573,14 @@ Once all of adjusted r-squared values are calculated a dataframe consisting of t
 
 ```python
 # calculate adjusted r-squared values for each variable combination
-print('Calculating adjusted R-squared values...')
+#print('Calculating adjusted R-squared values...')
 percent_multiplier = 100 / len(variable_list) # percent complete for each combination
 percent_complete = 0
 rsquared_values = []
 categorical_variables = []
 
 for f in variable_list:
-    print('{:.2f}%'.format(percent_complete), end = '\r', flush = True) # display percentage complete
+    #print('{:.2f}%'.format(percent_complete), end = '\r', flush = True) # display percentage complete
     
     # add C() to categorical variables for formula
     new_variables = []
@@ -611,8 +611,6 @@ categorical_variables = set(categorical_variables)
 result_df = result_df.sort_values(by = ['r_squared'], ascending = False).reset_index(drop = True)
 ```
 
-    Calculating adjusted R-squared values...
-    93.33%
 
 The following is what the dataframe looks like so far.
 
