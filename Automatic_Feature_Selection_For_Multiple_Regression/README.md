@@ -15,7 +15,7 @@ For each of those combinations, a regression model is created and the adjusted r
 * The `anova_lm` function, from statsmodels, is used to perform an Analysis of Variance test on a categorical and numerical variable to determine if they are correlated with each other.
 * The `chi2_contingency` function, from SciPy, is used to perform a Chi-Square Test of Independence on two categorical variables, to determine whether they are correlated with each other.
 * The `ols` function, from statsmodels, is used to model the regressions and calculate the adjusted r-squared value.
-* The `combinations` function, from itertools, is used to generate all of the possible combinations of independent variables.  It is also used to generate all of the combinations of two independent variables for each combination.
+* The `combinations` function, from itertools, is used to generate all of the possible combinations of independent variables.  It is also used to generate all of the pairs of independent variables for each combination.
 
 
 ```python
