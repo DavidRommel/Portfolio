@@ -199,24 +199,6 @@ result
     Calculating correlation between independent variables...
             
 
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -271,8 +253,6 @@ result
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 For the the second test I used the penguins dataset.  The categorical variables in this dataset were saved as a string data type instead of a categorical data type.  This resulted in the `species`, `island`, and `sex` independent variables being dropped.  Based on the results of the function, the best variable to predict a penguins body mass was the flipper length.
@@ -293,24 +273,6 @@ result
     Calculating correlation between independent variables...
             
 
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -347,8 +309,6 @@ result
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 If the categorical columns are changed to the `category` data type, then they are no longer dropped by the function.  Once these changes are made, the combined `species` and `sex` variables account for 84.5% of the variance in the penguins body mass.
@@ -366,24 +326,6 @@ result
     Calculating correlation between independent variables...
             
 
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -450,8 +392,6 @@ result
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 If the dependent variable is not a numeric data type, like in the example below, the function will display an error message and stop execution.
@@ -484,24 +424,6 @@ result
     Calculating correlation between independent variables...
             
 
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -550,8 +472,6 @@ result
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 ### Explaination of components of function
@@ -697,22 +617,6 @@ result_df
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -799,8 +703,6 @@ result_df
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 The next section of code checks the correlation between each of the pairs of independent variables.  I conducted a chi-square test for independence for checking if two categorical variables are correlated with each other.  If the p-value was less than 0.05 for the test then I concluded that the two categorical variables were correlated with each other.
@@ -855,22 +757,6 @@ df2
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -973,8 +859,6 @@ df2
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 Here is the first row of the previous dataframe expanded for illustrative purposes.  Many of the independent variables are highly correlated with each other, violating the no multicollinearity assumption for multiple regression, so this would not be a good combination of variables to use for a multiple regression model.
@@ -988,22 +872,6 @@ pd.DataFrame({'combination' : c_list, 'correlation' : df2.loc[0, 'variable_corre
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1045,8 +913,6 @@ pd.DataFrame({'combination' : c_list, 'correlation' : df2.loc[0, 'variable_corre
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 The last part of my code takes the maximum value from the correlations between each pair of independent variables and creates a new column with that value.  The values which have a maximum independent variable correlation of greater than the `max_threshold` value, which is the default of `0.4` here, are filtered out.  
@@ -1075,22 +941,6 @@ return_df
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1139,9 +989,6 @@ return_df
     </tr>
   </tbody>
 </table>
-</div>
-
-
 
 
 ```python
@@ -1247,6 +1094,6 @@ plt.show()
 
 
     
-![png](output_40_0.png)
+![png](Images/output_40_0.png)
     
 
