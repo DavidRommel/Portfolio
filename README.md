@@ -1,5 +1,5 @@
 ### Data Analytics Portfolio
-Welcome to my data analytics portfolio! This collection showcases my proficiency in transforming raw data into actionable insights, utilizing a comprehensive skillset across various tools. Here you will find projects demonstrating my expertise in data manipulation and querying with **SQL**, statistical analysis and modeling with **R**, advanced statistical modeling, predictive analytics, and machine learning with **Python**, dynamic data visualization and dashboard creation using **Tableau**, and automation of business processes with **VBA**.
+Welcome to my data analytics portfolio.  Here you will find projects demonstrating my expertise in data manipulation and querying with **SQL**, statistical analysis and modeling with **R**, advanced statistical modeling, predictive analytics, and machine learning with **Python**, dynamic data visualization and dashboard creation using **Tableau**, and automation of business processes with **VBA**.
 
 --- 
 
