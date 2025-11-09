@@ -1153,11 +1153,9 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     
     # add all of the categorical variables to a list
     categorical_variables = []
-    for i in range(result_df.shape[0]):
-        for j in result_df.iloc[i, 0]:
-             if X[j].dtype == 'category':
-                 categorical_variables.append(j)
-    categorical_variables = set(categorical_variables)
+    for col in X.columns:
+        if X[col].dtype == 'category':
+            categorical_variables.append(col)
     
     # calculate the correlation between each independent variable for each formula row
     print('Calculating correlation between independent variables...')
@@ -1167,7 +1165,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     corr_matrix = X.corr(numeric_only=True, method='pearson').abs()
     
     for i in range(result_df.shape[0]): # each combination of variables
-        print('{:.2f}%'.format(percent_complete), end = '\r', flush = True)  # display percentage complete
+        print('{:.2f}%'.format(percent_complete), end = '\r')  # display percentage complete
         variable_correlation = [] # empty list to store the correlations between each independent variable
         for j in combinations(result_df.loc[i,'variables'],2): # create all possible combinations of two variables
             if (j[0] in categorical_variables) & (j[1] in categorical_variables): # both variables are categorical
@@ -1219,7 +1217,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     categorical_variables = []
     
     for f in result_df['variables']:
-        print('{:.2f}%'.format(percent_complete), end = '\r', flush = True) # display percentage complete
+        print('{:.2f}%'.format(percent_complete), end = '\r') # display percentage complete
         
         # add C() to categorical variables for formula
         new_variables = []
