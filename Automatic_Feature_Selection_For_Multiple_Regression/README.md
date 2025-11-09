@@ -1091,7 +1091,7 @@ plt.show()
 ---
 My previous version of the `select_variables()` function was not as efficient as it could have been.
 * The function now calculates the correlation between the pairs of independent predictor variables **before** calculating the adjusted R-squared values.
-    * This significantly reduced the amount of time required for calculating the adjusted R-squared values, since a lot of the variable combinations are eliminated before that step for failing the no multicollinearity assumption.
+    * This significantly reduces the amount of time required for calculating the adjusted R-squared values, since a lot of the variable combinations are eliminated before that step for failing the no multicollinearity assumption.
 * I also created a single correlation matrix of all of the independent variables and referenced that through indexing, instead of individually calculating the correlation value for each pair of variables.
 
 
