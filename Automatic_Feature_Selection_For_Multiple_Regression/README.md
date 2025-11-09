@@ -1,20 +1,20 @@
 ## Automatic Feature Selection For Multiple Regression
 
-While I was working on my [Dallas-Fort Worth School Performance](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance/README.md) case study, I thought about how to devise an automated method of selecting the independent variables which would result in the highest adjusted r-squared value.  I could probably use lasso regression to accomplish this, but decided to try a brute force approach.  My function is rather CPU-intensive, since it creates regression models for each possible combination of the independent variables.
+While I was working on my [Dallas-Fort Worth School Performance](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance/README.md) case study, I thought about how to devise an automated method of selecting the independent variables which would result in the highest adjusted R-squared value.  I could probably use lasso regression to accomplish this, but decided to try a brute force approach.  My function is rather CPU-intensive, since it creates regression models for each possible combination of the independent variables.
 
 For example:
 * 3 possible independent variables will result in 6 combinations
 * 5 possible independent variables will result in 30 combinations
 * 10 possible independent variables will result in 1022 combinations
 
-For each of those combinations, a regression model is created and the adjusted r-squared value is calculated, then the correlation between each of the pairs of independent predictor variables is also calculated.  This can result in rather long processing times when you have many predictor variables.  I added progress indicators to give an indication of how much time is remaining for each of those proceedures.  It would take a substantial amount of time to calculate results for a dataset with many predictor variables though.
+For each of those combinations, a regression model is created and the adjusted R-squared value is calculated, then the correlation between each of the pairs of independent predictor variables is also calculated.  This can result in rather long processing times when you have many predictor variables.  I added progress indicators to give an indication of how much time is remaining for each of those proceedures.  It would take a substantial amount of time to calculate results for a dataset with many predictor variables though.
 
 ### Imports  
 ---
 
 * The `anova_lm` function, from statsmodels, is used to perform an Analysis of Variance test on a categorical and numerical variable to determine if they are correlated with each other.
 * The `chi2_contingency` function, from SciPy, is used to perform a Chi-Square Test of Independence on two categorical variables, to determine whether they are correlated with each other.
-* The `ols` function, from statsmodels, is used to model the regressions and calculate the adjusted r-squared value.
+* The `ols` function, from statsmodels, is used to model the regressions and calculate the adjusted R-squared value.
 * The `combinations` function, from itertools, is used to generate all of the possible combinations of independent variables.  It is also used to generate all of the pairs of independent variables for each combination.
 
 
@@ -40,7 +40,7 @@ from pandas.api.types import is_numeric_dtype, is_categorical_dtype
 def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     '''
     Calculates the optimal combination of independent predictor variables for a multiple
-    regression model.  Results are sorted by adjusted r-squared values.  The no multicollinearity
+    regression model.  Results are sorted by adjusted R-squared values.  The no multicollinearity
     assumption is verified, by making sure that all independent variables for a combination are
     correlated with each other by no more than a specified threshold.  Categorical independent
     variables are supported through using hypothesis testing to determine interdependence.
@@ -59,7 +59,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     Returns
     -------
     result_df : pandas.DataFrame
-        A dataframe consisting of the independent variables, adjusted r-squared value, 
+        A dataframe consisting of the independent variables, adjusted R-squared value, 
         and maximum correlation between the independent variables
     '''
     # Exit function if dependent variable is NOT numerical
@@ -89,7 +89,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
         for j in combinations(X.columns, i):
             variable_list.append(j)
 
-    # calculate adjusted r-squared values for each variable combination
+    # calculate adjusted R-squared values for each variable combination
     print('Calculating adjusted R-squared values...')
     percent_multiplier = 100 / len(variable_list) # percent complete for each combination
     percent_complete = 0
@@ -108,23 +108,23 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
             else:
                 new_variables.append(col)    
                 
-        # calculate adjusted r-squared value for variable combination
+        # calculate adjusted R-squared value for variable combination
         ols_formula = y.name + ' ~ ' + ' + '.join(new_variables)
         OLS = ols(formula = ols_formula, data = data)
         model = OLS.fit()
         rsquared_values.append(model.rsquared_adj)
         percent_complete += percent_multiplier # percentage complete
         
-    # build dataframe of the variable combinations and their adjusted r-squared values
+    # build dataframe of the variable combinations and their adjusted R-squared values
     result_df = pd.DataFrame({'variables' : variable_list, 'r_squared' : rsquared_values})
     
-    # filter out rows with an adjusted r-squared value of less than 0
+    # filter out rows with an adjusted R-squared value of less than 0
     result_df = result_df[result_df['r_squared'] > 0].copy()
 
     # The set() removes duplicates, this set will be referenced to check if a variable is categorical
     categorical_variables = set(categorical_variables)
     
-    # sort results from highest adjusted r-squared value to the lowest
+    # sort results from highest adjusted R-squared value to the lowest
     result_df = result_df.sort_values(by = ['r_squared'], ascending = False).reset_index(drop = True)
     
     # calculate the correlation between each independent variable for each formula row
@@ -563,15 +563,15 @@ for i in variable_list:
     sepal_length, sepal_width, petal_width, species
 
 
-The next section of code calculates the adjusted r-squared value for each of the combinations.  The `ols()` formula requires that categorical variables be enclosed in `C()` so there is a section to do that for those variables.  
+The next section of code calculates the adjusted R-squared value for each of the combinations.  The `ols()` formula requires that categorical variables be enclosed in `C()` so there is a section to do that for those variables.  
 
-The formula for each independent variable combination, from the `variable_list` above, is then created.  An ordinary least squares regression is then modeled for each formula and the adjusted r-squared value for each combination is saved to a list.  
+The formula for each independent variable combination, from the `variable_list` above, is then created.  An ordinary least squares regression is then modeled for each formula and the adjusted R-squared value for each combination is saved to a list.  
 
-Once all of adjusted r-squared values are calculated a dataframe consisting of those results is created.  The rows with an adjusted r-squared value of less than zero are filtered out and the dataframe is sorted by the adjusted r-squared values, so that the variable combinations with the highest value are at the top of the dataframe.
+Once all of adjusted R-squared values are calculated a dataframe consisting of those results is created.  The rows with an adjusted R-squared value of less than zero are filtered out and the dataframe is sorted by the adjusted R-squared values, so that the variable combinations with the highest value are at the top of the dataframe.
 
 
 ```python
-# calculate adjusted r-squared values for each variable combination
+# calculate adjusted R-squared values for each variable combination
 #print('Calculating adjusted R-squared values...')
 percent_multiplier = 100 / len(variable_list) # percent complete for each combination
 percent_complete = 0
@@ -590,23 +590,23 @@ for f in variable_list:
         else:
             new_variables.append(col)    
             
-    # calculate adjusted r-squared value for variable combination
+    # calculate adjusted R-squared value for variable combination
     ols_formula = y.name + ' ~ ' + ' + '.join(new_variables)
     OLS = ols(formula = ols_formula, data = data)
     model = OLS.fit()
     rsquared_values.append(model.rsquared_adj)
     percent_complete += percent_multiplier # percentage complete
     
-# build dataframe of the variable combinations and their adjusted r-squared values
+# build dataframe of the variable combinations and their adjusted R-squared values
 result_df = pd.DataFrame({'variables' : variable_list, 'r_squared' : rsquared_values})
 
-# filter out rows with an adjusted r-squared value of less than 0
+# filter out rows with an adjusted R-squared value of less than 0
 result_df = result_df[result_df['r_squared'] > 0].copy()
 
 # The set() removes duplicates, this set will be referenced to check if a variable is categorical
 categorical_variables = set(categorical_variables)
 
-# sort results from highest adjusted r-squared value to the lowest
+# sort results from highest adjusted R-squared value to the lowest
 result_df = result_df.sort_values(by = ['r_squared'], ascending = False).reset_index(drop = True)
 ```
 
@@ -1083,8 +1083,171 @@ sns.boxplot(data = df, x = 'species', y = 'petal_length', hue = 'species')
 plt.show()
 ```
 
-
     
 ![png](Images/output_40_0.png)
     
+
+### Function update (2025-11-08)
+---
+My previous version of the `select_variables()` function was not as efficient as it could have been.
+* For this update I evaluated the correlation between the pairs independent predictor variables **before** calculating the adjusted R-squared values.
+    * This significantly reduced the amount of time required for calculating the adjusted R-squared values, since a lot of the variable combinations are eliminated before that step for failing the no multicollinearity assumption.
+* I also created a single correlation matrix and accessed that through indexing, instead of individually calculating the correlation value for each pair of variables.
+
+
+```python
+def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
+    '''
+    Calculates the optimal combination of independent predictor variables for a multiple
+    regression model.  Results are sorted by adjusted R-squared values.  The no multicollinearity
+    assumption is verified, by making sure that all independent variables for a combination are
+    correlated with each other by no more than a specified threshold.  Categorical independent
+    variables are supported through using hypothesis testing to determine interdependence.
+    
+    Parameters
+    ----------
+    X : pandas.DataFrame
+        A dataframe consisting of The independent predictor variables
+    y : pandas.Series
+        A series consisting of the dependent variable
+    min_threshold : float, default: 0.4
+        The minimum required correlation between an independent variable and the dependent variable
+    max_threshold : float, default: 0.4
+        The maximum allowed correlation between two independent variables
+
+    Returns
+    -------
+    result_df : pandas.DataFrame
+        A dataframe consisting of the independent variables, adjusted R-squared value, 
+        and maximum correlation between the independent variables
+    '''
+    # Exit function if dependent variable is NOT numerical
+    if (not is_numeric_dtype(y)):
+        print('ERROR: Dependent variable \'{}\' must be numerical'.format(y.name))
+        return None
+    
+    # Drop independent variables that are NOT numerical or categorical
+    for col in X.columns:
+        if (not isinstance(X[col].dtype, pd.CategoricalDtype)) & (not is_numeric_dtype(df[col])):
+            X = X.drop(columns = [col])            
+            print('WARNING: Independent variable \'{}\' was not numerical or categorical so it was dropped'.format(col))
+
+    # Drop independent variables less than the min_threshold
+    data = pd.concat([y,X], axis = 1)
+    data.dropna(inplace=True)
+    correlations = data.corr(numeric_only=True).abs().loc[y.name].drop(y.name)
+    for i in correlations.index:
+        if correlations.loc[i] < min_threshold:
+            print('WARNING: Independent variable \'{}\' dropped ({:.3f} < {:.2f})'.format(i, correlations.loc[i], min_threshold))
+            X = X.drop(columns = [i])
+            data = data.drop(columns = [i])
+    
+    # create a list of all possible variable combinations
+    variable_list = []
+    for i in range(1, X.shape[0] + 1):
+        for j in combinations(X.columns, i):
+            variable_list.append(j)
+
+    # move correlation check here
+    result_df = pd.DataFrame({'variables' : variable_list})
+    
+    # add all of the categorical variables to a list
+    categorical_variables = []
+    for i in range(result_df.shape[0]):
+        for j in result_df.iloc[i, 0]:
+             if X[j].dtype == 'category':
+                 categorical_variables.append(j)
+    categorical_variables = set(categorical_variables)
+    
+    # calculate the correlation between each independent variable for each formula row
+    print('Calculating correlation between independent variables...')
+    percent_multiplier = 100 / result_df.shape[0]
+    percent_complete = 0
+    correlation_list = [] # list of the lists of correlations between independent variables for each combination
+    corr_matrix = X.corr(numeric_only=True, method='pearson').abs()
+    
+    for i in range(result_df.shape[0]): # each combination of variables
+        print('{:.2f}%'.format(percent_complete), end = '\r', flush = True)  # display percentage complete
+        variable_correlation = [] # empty list to store the correlations between each independent variable
+        for j in combinations(result_df.loc[i,'variables'],2): # create all possible combinations of two variables
+            if (j[0] in categorical_variables) & (j[1] in categorical_variables): # both variables are categorical
+                # Chi-square test for independence
+                # check if two categorical variables are correlated
+                result = chi2_contingency(pd.crosstab(data[j[0]], data[j[1]]))
+                if result[1] < 0.05:
+                    variable_correlation.append(1) # correlated
+                else:
+                    variable_correlation.append(0) # not correlated
+            elif (j[0] in categorical_variables) | (j[1] in categorical_variables): # one variable is categorical
+                # ANOVA test
+                # check if a categorical and numerical independent variable are correlated
+                if j[0] in categorical_variables:
+                    ols_formula = ' ~ '.join([j[1], j[0]])
+                else:
+                    ols_formula = ' ~ '.join([j[0], j[1]])
+                model = ols(formula = ols_formula, data = data).fit()
+                results = anova_lm(model, typ = 2)
+                p_value = results.loc[results.index[0],'PR(>F)']
+                if p_value < 0.05:
+                    variable_correlation.append(1) # correlated
+                else:
+                    variable_correlation.append(0) # not correlated
+            else:
+                # neither variables are categorical
+                variable_correlation.append(corr_matrix.loc[j[0], j[1]])
+                
+        correlation_list.append(variable_correlation)
+        percent_complete += percent_multiplier # percentage complete
+    
+    # iterate though lists of correlations and calculate the maximum value from each nested list
+    max_corr_list = []
+    
+    for i in correlation_list:
+        if len(i) > 0:
+            max_corr_list.append(max(i))
+        else: # single variables will have an empty list
+            max_corr_list.append(0)
+    
+    result_df['max_corr'] = max_corr_list
+    result_df = result_df[result_df['max_corr'] <= max_threshold].reset_index(drop = True).copy()
+
+    # calculate adjusted R-squared values for each variable combination
+    print('Calculating adjusted R-squared values...')
+    percent_multiplier = 100 / len(variable_list) # percent complete for each combination
+    percent_complete = 0
+    rsquared_values = []
+    categorical_variables = []
+    
+    for f in result_df['variables']:
+        print('{:.2f}%'.format(percent_complete), end = '\r', flush = True) # display percentage complete
+        
+        # add C() to categorical variables for formula
+        new_variables = []
+        for col in f:
+            if col in categorical_variables:
+                new_variables.append('C(' + col + ')')
+                categorical_variables.append(col)
+            else:
+                new_variables.append(col)    
+                
+        # calculate adjusted R-squared value for variable combination
+        ols_formula = y.name + ' ~ ' + ' + '.join(new_variables)
+        OLS = ols(formula = ols_formula, data = data)
+        model = OLS.fit()
+        rsquared_values.append(model.rsquared_adj)
+        percent_complete += percent_multiplier # percentage complete
+    
+    print('        ') # remove last percentage from display
+        
+    # build dataframe of the variable combinations and their adjusted R-squared values
+    result_df['r_squared'] = rsquared_values
+    
+    # filter out rows with an adjusted R-squared value of less than 0
+    result_df = result_df[result_df['r_squared'] > 0].copy()
+
+    # sort results from highest adjusted R-squared value to the lowest
+    result_df = result_df.sort_values(by = ['r_squared'], ascending = False).reset_index(drop = True)
+    
+    return result_df
+```
 
