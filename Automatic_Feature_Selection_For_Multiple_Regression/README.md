@@ -1224,7 +1224,6 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
         for col in f:
             if col in categorical_variables:
                 new_variables.append('C(' + col + ')')
-                categorical_variables.append(col)
             else:
                 new_variables.append(col)    
                 
