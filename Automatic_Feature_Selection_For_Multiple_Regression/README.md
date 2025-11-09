@@ -1054,7 +1054,6 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
         for j in combinations(X.columns, i):
             variable_list.append(j)
 
-    # move correlation check here
     result_df = pd.DataFrame({'variables' : variable_list})
     
     # add all of the categorical variables to a list
