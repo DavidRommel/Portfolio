@@ -477,7 +477,7 @@ result
 </table>
 
 
-### Explaination of components of function
+### Explanation of components of function
 ---
 
 I will continue using the iris dataset to explain components of the `select_variables()` function.  Below are the values that would be passed to the function.
@@ -497,7 +497,7 @@ max_threshold = 0.4
 
 This first section of the function checks for the following:
 * That the dependent variable is numerical
-    * The return statement is commented out for this explaination
+    * The return statement is commented out for this explanation
 * That the independent variables are either numerical or categorical
 * The `X` and `y` dataframes are combined into a single dataframe named `data`.  It then checks the correlation of each of the independent variables with the dependent variable.
     * Independent variables whose correlation with the dependent variable is less than the `min_threshold` value, which has a default value of `0.4`, are dropped.
