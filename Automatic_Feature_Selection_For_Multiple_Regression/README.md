@@ -85,7 +85,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     
     # create a list of all possible variable combinations
     variable_list = []
-    for i in range(1, X.shape[0] + 1):
+    for i in range(1, X.shape[1] + 1):
         for j in combinations(X.columns, i):
             variable_list.append(j)
 
@@ -530,7 +530,7 @@ for i in correlations.index:
 
 # create a list of all possible variable combinations
 variable_list = []
-for i in range(1, X.shape[0] + 1):
+for i in range(1, X.shape[1] + 1):
     for j in combinations(X.columns, i):
         variable_list.append(j)
 ```
@@ -1050,7 +1050,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     
     # create a list of all possible variable combinations
     variable_list = []
-    for i in range(1, X.shape[0] + 1):
+    for i in range(1, X.shape[1] + 1):
         for j in combinations(X.columns, i):
             variable_list.append(j)
 
