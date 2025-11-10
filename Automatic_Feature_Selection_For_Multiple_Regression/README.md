@@ -9,7 +9,7 @@ For example:
 * 20 possible independent variables will result in 1048575 combinations
 * 27 possible independent variables will result in 134217727 combinations
     * More than 27 possible independent variables appears to cause my Juptyer Notebook kernel to crash
-    * This occurs when the code attempts to create all of the possible variable combinations, before computing anything
+    * This occurs when the code attempts to create a list of all of the possible variable combinations, before even computing anything
 
 For each of those combinations, a regression model is created and the adjusted R-squared value is calculated, then the correlation between each of the pairs of independent predictor variables is also calculated.  This can result in rather long processing times when you have many predictor variables.  I added progress indicators to give an indication of how much time is remaining for each of those proceedures.  It would take a substantial amount of time to calculate results for a dataset with many predictor variables though.
 
