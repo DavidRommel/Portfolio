@@ -750,7 +750,7 @@ for i in range(result_df.shape[0]): # each combination of variables
     percent_complete += percent_multiplier # percentage complete
 ```
 
-The code above calculates the correlation between each of the pairs of independent variables for each row.  Thought a column containing this information is not created by the function, I created one in the code below for clarity.
+The code above calculates the correlation between each of the pairs of independent variables for each row.  Though a column containing this information is not created by the function, I created one in the code below for clarity.
 
 
 ```python
