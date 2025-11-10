@@ -5,9 +5,9 @@ While I was working on my [Dallas-Fort Worth School Performance](https://github.
 For example:
 * 3 possible independent variables will result in 7 combinations
 * 5 possible independent variables will result in 31 combinations
-* 10 possible independent variables will result in 1023 combinations
-* 20 possible independent variables will result in 1048575 combinations
-* 27 possible independent variables will result in 134217727 combinations
+* 10 possible independent variables will result in 1,023 combinations
+* 20 possible independent variables will result in 1,048,575 combinations
+* 27 possible independent variables will result in 134,217,727 combinations
     * More than 27 possible independent variables appears to cause my Juptyer Notebook's kernel to crash
     * This occurs when the code attempts to create a list of all of the possible variable combinations, before even computing anything
 
