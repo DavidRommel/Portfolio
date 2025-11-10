@@ -921,7 +921,7 @@ pd.DataFrame({'combination' : c_list, 'correlation' : df2.loc[0, 'variable_corre
 </table>
 
 
-The last part of my code takes the maximum value from the correlations between each pair of independent variables and creates a new column with that value.  The values which have a maximum independent variable correlation of greater than the `max_threshold` value, which is the default of `0.4` here, are filtered out.  
+The last part of my code takes the maximum value, from the correlations between each pair of independent variables, and creates a new column with that value.  The values which have a maximum independent variable correlation of greater than the `max_threshold` value, which is the default of `0.4` here, are filtered out.  
 
 I commented out the return statement from the function and replaced it with assignment to a new variable.  This final dataframe is what is returned from the actual function.
 
