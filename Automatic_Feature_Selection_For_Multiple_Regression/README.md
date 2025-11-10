@@ -571,7 +571,7 @@ The next section of code calculates the adjusted R-squared value for each of the
 
 The formula for each independent variable combination, from the `variable_list` above, is then created.  An ordinary least squares regression is then modeled for each formula and the adjusted R-squared value for each combination is saved to a list.  
 
-Once all of the adjusted R-squared values are calculated a dataframe consisting of those results is created.  The rows with an adjusted R-squared value of less than zero are filtered out and the dataframe is sorted by the adjusted R-squared values, so that the variable combinations with the highest value are at the top of the dataframe.
+Once all of the adjusted R-squared values are calculated, a dataframe consisting of those results is created.  The rows with an adjusted R-squared value of less than zero are filtered out and the dataframe is sorted by the adjusted R-squared values, so that the variable combinations with the highest value are at the top of the dataframe.
 
 
 ```python
