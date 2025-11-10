@@ -707,7 +707,7 @@ result_df
 </table>
 
 
-The next section of code checks the correlation between each of the pairs of independent variables.  I conducted a chi-square test for independence for checking if two categorical variables are correlated with each other.  If the p-value was less than 0.05 for the test then I concluded that the two categorical variables were correlated with each other.
+The next section of code checks the correlation between each of the pairs of independent variables. I conducted a chi-square test for independence for checking if two categorical variables are correlated with each other, and an Analysis of Variance test to determine if a categorical and numerical variable are correlated with each other. If the p-value for either of those tests were less than 0.05, then I concluded that the two categorical variables were correlated with each other.  For pairs of numerical variables I calculated the Pearson correlation coefficient.
 
 
 ```python
