@@ -11,7 +11,7 @@ For example:
     * More than 27 possible independent variables appears to cause my Juptyer Notebook's kernel to crash
     * This occurs when the code attempts to create a list of all of the possible variable combinations, before even computing anything
 
-For each of those combinations, a regression model is created and the adjusted R-squared value is calculated, then the correlation between each of the pairs of independent predictor variables is also calculated.  This can result in rather long processing times when you have many predictor variables.  I added progress indicators to give an indication of how much time is remaining for each of those proceedures.  It would take a substantial amount of time to calculate results for a dataset with many predictor variables though.
+For each of those combinations, a regression model is created and the adjusted R-squared value is calculated, then the correlations between each of the pairs of independent predictor variables are calculated.  This can result in exponentially longer processing times for each additional possible predictor variable.  I added progress indicators to give an indication of how much time is remaining for each of those proceedures.  It would take a substantial amount of time though, to calculate the optimal independent predictor variables for a dataset with many possible variables.
 
 ### Imports  
 ---
