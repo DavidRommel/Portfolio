@@ -4,6 +4,8 @@ Welcome to my data analytics portfolio.  Here you will find projects demonstrati
 --- 
 
 #### Predictive Analytics & Machine Learning
+* *Dallas-Fort Worth School Performance Revisited (In Progress)*
+  > Tableau, Python, Multiple Regression
 * [Automatic Feature Selection For Multiple Regression](https://github.com/DavidRommel/Portfolio/blob/main/Automatic_Feature_Selection_For_Multiple_Regression/README.md)
   > Python, Multiple Regression
 * [Dallas-Fort Worth School Performance](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance/README.md)
