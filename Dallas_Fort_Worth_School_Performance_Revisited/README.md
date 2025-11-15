@@ -18,7 +18,7 @@ If Lewisville High School wanted to increase their Overall Score to 75-percent, 
 
 Marcus High School has 82-percent of their students at least meeting grade level on the English 2 STAAR test, while Lewisville High School only as 51-percent.  This seems to indicate that improvements can be made in that area.
 
-Unfortunately, even if they increase the percent of students at least meeting grade level on the English 2 STAAR test to 100-percent, the model only predicts their overall score would increase to 73.2.  This seems to indicate that it would be unrealistic for the school to focus all of their attention on increasing English 2 exam results as a means of increasing their overall score.
+Unfortunately, even if they increase the percent of students at least meeting grade level on the English 2 STAAR test to 100-percent, the model only predicts their overall score would increase to 73.2.  This seems to indicate that it would be unrealistic for the school to focus all of their attention on increasing English 2 exam results, as a means of increasing their overall score.
 
 ![](Images/tableau_003.png)
 
