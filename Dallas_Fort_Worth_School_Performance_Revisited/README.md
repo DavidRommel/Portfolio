@@ -703,7 +703,7 @@ df_long.sort_values(by = ['county','campus', 'metric']).head(10)
 </table>
 
 
-I then split up the components the metric column into separate columns.  This was so that I could create the necessary filters in Tableau.
+I then split up the components of the `metric` column into separate columns.  This was so that I could create the necessary filters in Tableau.
 
 
 ```python
