@@ -7,13 +7,13 @@ According to the Texas Education Agency, a lot of variables go into calculating 
 
 Below is a screenshot of the dashboard.  The interactive dashboard can be found on [tableau public](https://public.tableau.com/views/Dallas-FortWorthSchoolComparisonDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
 
-![](tableau_001.png)
+![](Images/tableau_001.png)
 
 The above screenshot is of two schools in my area.  The school on the left is from a less-wealthy city, while the one on the right is located in a more affluent city.  The values for each of the sliders can be adjusted and the `Predicted Overall Score` will automatically update.  
 
 First I adjusted the `Offset` parameter so that the `Predicted Overall Score` equaled the actual `Overall Score`.  This is so you can better see the effects of adjusting the other variables.  
 
-![](tableau_002.png)
+![](Images/tableau_002.png)
 
 If Lewisville High School wanted to increase their Overall Score to 75-percent, you could then explore by how much they would need to increase one of the variables to obtain that score.
 
@@ -21,23 +21,23 @@ Marcus High School has 82-percent of their students at least meeting grade level
 
 Unfortunately, even if they increase the percent of students at least meeting grade level on the English 2 STAAR test to 100-percent, the model only predicts their overall score would increase to 73.2.  This seems to indicate that it would be unrealistic for the school to focus all of their attention on increasing English 2 exam results as a means of increasing their overall score.
 
-![](tableau_003.png)
+![](Images/tableau_003.png)
 
 As an alternative, getting more students *College, Career, & Military Ready* by the time they graduate may be a more effective means of increasing the school's overall score.  Increasing this by 18.9-percent seems feasible, since the resulting 62.4-percent would still be less than Marcus High School's 83-percent.
 
-![](tableau_004.png)
+![](Images/tableau_004.png)
 
 If you compare the two schools, one obvious point of difference is the percentage of economically disadvantaged students.  Lewisville High School has 69.5-percent while Marcus High School only has 12.2-percent.  This seems to indicate that a targeted approach towards that student group might be the most beneficial towards increasing the school's overall score.  
 
 Even increasing those percentages so that they are identical to Marcus High School, which has far fewer economically disadvantaged students, only increases the overall score of the school by 3.5 points.  Regardless, since that student group is a majority of the student population, a targeted approach should still be part of the schools overall plan.
 
-![](tableau_005.png)
+![](Images/tableau_005.png)
 
 If you observe the graphs comparing the two schools, chronic absenteeism is something the school should definately address.  The percentage of chronically absent students is a strong predictor of a poorly performing school.  
 
 Other than that, pretty much all across the board all of the metrics are lower for Lewisville High School than they are for Marcus High School.  That explains the significant difference in scores between the two schools.
 
-![](tableau_006.png)
+![](Images/tableau_006.png)
 
 In summary, this project was mostly just a test of applying a regression model to a Tableau dashboard for visualizing predictions.  Without knowing the exact formula that the Texas Education Agency uses to calculate the overall score, this limited model is not of much use in guiding school decision making.  It is usefull for quickly comparing the different high schools in the area though.
 
@@ -371,12 +371,12 @@ model.summary()
   <th>Kurtosis:</th>      <td> 3.128</td> <th>  Cond. No.          </th> <td>1.36e+04</td>
 </tr>
 </table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.36e+04. This might indicate that there are<br/>strong multicollinearity or other numerical problems.
-
+<br/><br/>
 
 
 These were the values that I put into the calculated field in Tableau to get the predicted score.
 
-![](tableau_007.png)
+![](Images/tableau_007.png)
 
 ### Pivot data for Tableau
 ---
@@ -389,22 +389,6 @@ df.head()
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -556,8 +540,6 @@ df.head()
   </tbody>
 </table>
 <p>5 rows × 47 columns</p>
-</div>
-
 
 
 In order to easily be able to create the graphs in Tableau, I pivoted it to a longer format, where different attributes of a school are on different rows.
@@ -571,22 +553,6 @@ df_long.sort_values(by = ['county','campus', 'metric']).head(10)
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -736,8 +702,6 @@ df_long.sort_values(by = ['county','campus', 'metric']).head(10)
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 I then split up the components the metric column into separate columns.  This was so that I could create the necessary filters in Tableau.
@@ -806,22 +770,6 @@ df_long.head(10)
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -993,8 +941,6 @@ df_long.head(10)
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 ### Tableau
@@ -1002,10 +948,10 @@ df_long.head(10)
 
 For the graphs, I filtered by the different metrics I created.  This was why I pivoted the data into a longer format, so that I could create all of the graphs from the same dataset.  The `year` field allowed me to display data for multiple years in the same graph.  I was also able to create a legend for the different student groups using the `students_group` field.
 
-![](tableau_008.png)
+![](Images/tableau_008.png)
 
 For the regression table, I created calculated fields to search for the specific values.  Each of these had an associated parameter, that was added to the calculated value at the end so that each could be adjusted by the parameter.
 
-![](tableau_009.png)
+![](Images/tableau_009.png)
 
 Separate worksheets, calculated fields, and parameters were created for the right pane as well.  One set of County and Campus filters were applied to the worksheets for the left pane, and another for the right pane.  Everything was then combined on the final dashboard.
