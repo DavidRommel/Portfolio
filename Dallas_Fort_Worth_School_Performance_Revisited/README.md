@@ -188,7 +188,7 @@ I modified the `select_variables()` function, that I explained in depth in the [
 
 * For this project I wasn't interested in checking for multicollinearity between the independent predictor variables, so I removed that section.
 * I also modified the function to only return combinations where all of the p-values of the coefficients were less than 0.05, and where none of the coefficients were negative.
-    * Some of the combinations had negative coefficents for variables that were positively correlated with a school's overall score, which didn't make sense so I added a conditional statement to filter those out.
+    * Some of the combinations had negative coefficients for variables that were positively correlated with a school's overall score, which didn't make sense so I added a conditional statement to filter those out.
 * I also reversed the variable combination list so that the combinations with the greatest numbers of variables were tested first.
 * I added a clause to stop searching when 20 results were found, however the function ended up running for almost an hour on my machine, and ended up checking all of the possible combinations to find 20 that matched my criteria.
 
