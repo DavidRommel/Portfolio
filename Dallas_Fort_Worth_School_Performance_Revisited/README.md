@@ -1,5 +1,4 @@
 ## Dallas-Fort Worth School Performance Revisited
----
 
 I decided to revisit an earlier project that I completed on [Dallas-Fort Worth Area High School Performance](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance/README.md).  This time instead of focusing on the socioeconomic factors of the city, I decided to just explore variables related to a schools academic performance as a means of predicting the overall score for a school.  
 
