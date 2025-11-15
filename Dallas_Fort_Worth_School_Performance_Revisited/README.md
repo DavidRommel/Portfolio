@@ -4,7 +4,7 @@ I decided to revisit an earlier project that I completed on [Dallas-Fort Worth A
 
 According to the Texas Education Agency, a lot of variables go into calculating this score.  The score accounts for how well a school improves from one year to the next, how it compares with other schools in the area, and how certain student groups are performing.  Even though I did not go quite into that amount of detail with my regression model, it was able to explain 88.7% of the variation in the overall scores of the high schools in the Dallas-Fort Worth area, using just seven variables.  
 
-Below is a screenshot of the dashboard.  The interactive dashboard can be found on [tableau public](https://public.tableau.com/views/Dallas-FortWorthSchoolComparisonDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
+Below is a screenshot of the dashboard.  The interactive dashboard can be found on [Tableau Public](https://public.tableau.com/views/Dallas-FortWorthSchoolComparisonDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
 
 ![](Images/tableau_001.png)
 
