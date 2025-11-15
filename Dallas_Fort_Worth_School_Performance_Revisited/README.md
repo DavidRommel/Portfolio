@@ -127,7 +127,7 @@ CGRAD1['state_school_id'] = ('TX-'+ CGRAD1['6_digit_county_district_number'].str
                                          '-' + CGRAD1['campus'].str.zfill(9))
 ```
 
-Each of the datasets contained far more fields than I was interested in, so only selected a subset of those fields.
+Each of the datasets contained far more fields than I was interested in, so I only selected a subset of those fields.
 
 
 ```python
