@@ -759,7 +759,7 @@ for i in df_long['metric']:
 df_long['metric'] = metric_list
 ```
 
-I finally converted the `value` field to a numeric value, instead of a string, then sorted the dataframe.
+I finally converted the `value` field to a numeric value, instead of a string, then sorted the dataframe.  Below is what the final dataframe looks like.
 
 
 ```python
