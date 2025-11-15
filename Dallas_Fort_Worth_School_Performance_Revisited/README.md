@@ -169,7 +169,7 @@ for c in range(1, CGRAD1.shape[1]): # columns
 CGRAD1 = CGRAD1.rename(columns = rename_dict)
 ```
 
-I filtered the statewide summary dataset to just contain the high schools in the Dallas-Fort Worth counties.  I the joined all of the datasets together using the `state_school_id` field that I created for each of the datasets.
+I filtered the statewide summary dataset to just contain the high schools in the Dallas-Fort Worth counties.  I then joined all of the datasets together using the `state_school_id` field that I created for each of the datasets.
 
 
 ```python
