@@ -98,16 +98,6 @@ rename_dict = {
     "C20GUA23R": "campus_2023_dual_credit_graduates_3_hrs_ela_or_math_or_9_hrs_any_subject_two_or_more_races_rate",
     "C20GY22R": "campus_2022_apib_met_criteria_in_any_subject_graduates_two_or_more_races_rate",
     "C20GY23R": "campus_2023_apib_met_criteria_in_any_subject_graduates_two_or_more_races_rate",
-    "C20GZ22R": "campus_2022_completion_of_onramps_course_graduates_two_or_more_races_rate",
-    "C20GZ23R": "campus_2023_completion_of_onramps_course_graduates_two_or_more_races_rate",
-    "C21GG22R": "campus_2022_associated_ccmr_college_ready_two_or_more_races_rate",
-    "C21GG23R": "campus_2023_associated_ccmr_college_ready_two_or_more_races_rate",
-    "C2CRB22R": "campus_2022_tsi_criteria_graduates_two_or_more_races_both_rate",
-    "C2CRB23R": "campus_2023_tsi_criteria_graduates_two_or_more_races_both_rate",
-    "C2CRE22R": "campus_2022_tsi_criteria_graduates_two_or_more_races_either_rate",
-    "C2CRE23R": "campus_2023_tsi_criteria_graduates_two_or_more_races_either_rate",
-    "C2CRM22R": "campus_2022_tsi_criteria_graduates_two_or_more_races_mathematics_rate",
-    "C2CRM23R": "campus_2023_tsi_criteria_graduates_two_or_more_races_mathematics_rate",
     # additional rows
     "DISTNAME": "district_name",
     "DISTRICT": "6_digit_county_district_number"
