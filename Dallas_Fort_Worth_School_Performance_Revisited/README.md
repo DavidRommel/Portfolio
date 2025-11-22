@@ -271,7 +271,7 @@ def select_variables(X, y, min_threshold = 0.4):
 
 The following combination of variables was the result returned by the function with the highest adjusted R-squared value.  I decided to use these independent predictor variables for the final regression model.  
 
-Since this project was mostly just exploring how to integrate an multiple regression model with a Tableau dashboard, I wanted to have as many independent predictor variables as possible.  I attempted to build a model using student and staff data, but could not create a model with an adjusted R-squared value of more than 0.6, while accounting for correlation between the predictor variables.  For the sake of this project I decided to ignore the no multicollinearity assumption.  Many of the following variables are highly correlated with each other, making this not a valid model to predict the overall score of a high school.
+> Since this project was mostly just exploring how to integrate an multiple regression model with a Tableau dashboard, I wanted to have as many independent predictor variables as possible.  I attempted to build a model using student and staff data, but could not create a model with an adjusted R-squared value of more than 0.6, while accounting for correlation between the predictor variables.  For the sake of this project I decided to ignore the no multicollinearity assumption.  Many of the following variables are highly correlated with each other, making this not a valid model to predict the overall score of a high school.
 
 
 ```python
