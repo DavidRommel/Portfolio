@@ -8,6 +8,8 @@ Welcome to my data analytics portfolio.  Here you will find projects demonstrati
 * [Google Data Analytics Professional Certificate](https://coursera.org/share/9c061569559f37f63ce223f63604dcdf)
 * *Google Advanced Data Analytics (5 of 8 courses complete)*
 
+#### Notes
+* [Data Analysis Notes Repository](https://github.com/DavidRommel/Notes)
 
 --- 
 
