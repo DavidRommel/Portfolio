@@ -8,9 +8,6 @@ Welcome to my data analytics portfolio.  Here you will find projects demonstrati
 * [Google Data Analytics Professional Certificate](https://coursera.org/share/9c061569559f37f63ce223f63604dcdf)
 * *Google Advanced Data Analytics (5 of 8 courses complete)*
 
-#### Notes
-* [Data Analysis Notes Repository](https://github.com/DavidRommel/Notes)
-
 --- 
 
 #### Predictive Analytics & Machine Learning
@@ -31,3 +28,7 @@ Welcome to my data analytics portfolio.  Here you will find projects demonstrati
 * [Sheath Name Checker](https://github.com/DavidRommel/Portfolio/blob/main/Sheath_Name_Checker/README.md)
 * [FTTH Tap Checker](https://github.com/DavidRommel/Portfolio/blob/main/FTTH_Tap_Checker/README.md)
 * [Application Of The Breadth First Search Algorithm For Fiber Splicing ](https://github.com/DavidRommel/Portfolio/blob/main/Automated_Fiber_Splicing/README.md)
+
+
+#### Notes
+* [Data Analysis Notes Repository](https://github.com/DavidRommel/Notes)
