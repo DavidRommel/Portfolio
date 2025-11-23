@@ -19,7 +19,7 @@ Welcome to my data analytics portfolio.  Here you will find projects demonstrati
   > Python, Multiple Regression
 
 
-#### Exploratory Data Analysis (EDA)
+#### Exploratory Data Analysis
 * [openFDA Food Recalls](https://github.com/DavidRommel/Portfolio/tree/main/Food_Recall_Exploratory_Data_Analysis//README.md)
   > R
 
