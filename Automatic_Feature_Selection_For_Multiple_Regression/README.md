@@ -1170,7 +1170,6 @@ In order to get a better indication of how much longer the processing will take,
 import time
 ```
 
-
 ```python
 def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     '''
@@ -1234,9 +1233,6 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     
     # calculate the correlation between each independent variable for each formula row
     print('Calculating correlation between independent variables...')
-    percent_multiplier = 100 / result_df.shape[0]
-    percent_complete = 0
-    time_remaining = 0
     correlation_list = [] # list of the lists of correlations between independent variables for each combination
     corr_matrix = X.corr(numeric_only=True, method='pearson').abs()
 
@@ -1288,8 +1284,6 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
                 variable_correlation.append(corr_matrix.loc[j[0], j[1]])
                 
         correlation_list.append(variable_correlation)
-        #percent_complete += percent_multiplier # percentage complete
-        
     
     # iterate though lists of correlations and calculate the maximum value from each nested list
     max_corr_list = []
@@ -1304,9 +1298,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     result_df = result_df[result_df['max_corr'] <= max_threshold].reset_index(drop = True).copy()
 
     # calculate adjusted R-squared values for each variable combination
-    print('Calculating adjusted R-squared values...')
-    percent_multiplier = 100 / len(variable_list) # percent complete for each combination
-    percent_complete = 0
+    print('Calculating adjusted R-squared values...')    
     rsquared_values = []
     categorical_variables = []
 
@@ -1331,7 +1323,6 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
             seconds_remaining = str(seconds_remaining).zfill(2)
             print('Time remaining: {}:{}'.format(minutes_remaining, seconds_remaining), end = '\r')
         
-        
         # add C() to categorical variables for formula
         new_variables = []
         for col in f:
@@ -1345,9 +1336,6 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
         OLS = ols(formula = ols_formula, data = data)
         model = OLS.fit()
         rsquared_values.append(model.rsquared_adj)
-        percent_complete += percent_multiplier # percentage complete
-    
-    print('                              ') # remove last percentage from display
         
     # build dataframe of the variable combinations and their adjusted R-squared values
     result_df['r_squared'] = rsquared_values
@@ -1360,5 +1348,4 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     
     return result_df
 ```
-
 
