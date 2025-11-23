@@ -1157,3 +1157,208 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     return result_df
 ```
 
+### Function Update (2025-11-23)
+---
+In order to get a better indication of how much longer the processing will take, I replaced the percent remaining indicator with a time remaining indicator.  The time remaining is updated every ten operations, in order to reduce the processing required for this step.  The code block calculates the time required to perform ten operations, then estimates based on how many operations are remaining, how much longer it will take.  I arbitrarily chose the number ten, however this number could probably be increased even more, and it would probably smooth out the time remaining more.  As it is, sometimes the time remaining will increase if the current batch of ten operations takes longer than on average, or if the previous batch was completed more quickly than an average batch.  All-in-all though, this seems to give a good indication on how long it will take the processing to finish.
+
+**Todo:**
+* I plan on adding a check for the maximum p-value from each of the regression results, since there is no point displaying variable combinations whose coefficients aren’t all statistically significant.
+* I also thought about the 27 variable limitation that my function currently has.  I believe this could be overcome by nesting all of the code into the for loop, that generates all of the possible combinations.  This way many of the potential combinations could be eliminated due to correlation between the predictor variables, significantly reducing the size of the resulting data frame, and preventing the memory overload that currently crashes the function when there are many variables.
+
+
+```python
+import time
+```
+
+
+```python
+def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
+    '''
+    Calculates the optimal combination of independent predictor variables for a multiple
+    regression model.  Results are sorted by adjusted R-squared values.  The no multicollinearity
+    assumption is verified, by making sure that all independent variables for a combination are
+    correlated with each other by no more than a specified threshold.  Categorical independent
+    variables are supported through using hypothesis testing to determine interdependence.
+    
+    Parameters
+    ----------
+    X : pandas.DataFrame
+        A dataframe consisting of The independent predictor variables
+    y : pandas.Series
+        A series consisting of the dependent variable
+    min_threshold : float, default: 0.4
+        The minimum required correlation between an independent variable and the dependent variable
+    max_threshold : float, default: 0.4
+        The maximum allowed correlation between two independent variables
+
+    Returns
+    -------
+    result_df : pandas.DataFrame
+        A dataframe consisting of the independent variables, adjusted R-squared value, 
+        and maximum correlation between the independent variables
+    '''
+    # Exit function if dependent variable is NOT numerical
+    if (not is_numeric_dtype(y)):
+        print('ERROR: Dependent variable \'{}\' must be numerical'.format(y.name))
+        return None
+    
+    # Drop independent variables that are NOT numerical or categorical
+    for col in X.columns:
+        if (not isinstance(X[col].dtype, pd.CategoricalDtype)) & (not is_numeric_dtype(df[col])):
+            X = X.drop(columns = [col])            
+            print('WARNING: Independent variable \'{}\' was not numerical or categorical so it was dropped'.format(col))
+
+    # Drop independent variables less than the min_threshold
+    data = pd.concat([y,X], axis = 1)
+    data.dropna(inplace=True)
+    correlations = data.corr(numeric_only=True).abs().loc[y.name].drop(y.name)
+    for i in correlations.index:
+        if correlations.loc[i] < min_threshold:
+            print('WARNING: Independent variable \'{}\' dropped ({:.3f} < {:.2f})'.format(i, correlations.loc[i], min_threshold))
+            X = X.drop(columns = [i])
+            data = data.drop(columns = [i])
+    
+    # create a list of all possible variable combinations
+    variable_list = []
+    for i in range(1, X.shape[1] + 1):
+        for j in combinations(X.columns, i):
+            variable_list.append(j)
+
+    result_df = pd.DataFrame({'variables' : variable_list})
+    
+    # add all of the categorical variables to a list
+    categorical_variables = []
+    for col in X.columns:
+        if X[col].dtype == 'category':
+            categorical_variables.append(col)
+    
+    # calculate the correlation between each independent variable for each formula row
+    print('Calculating correlation between independent variables...')
+    percent_multiplier = 100 / result_df.shape[0]
+    percent_complete = 0
+    time_remaining = 0
+    correlation_list = [] # list of the lists of correlations between independent variables for each combination
+    corr_matrix = X.corr(numeric_only=True, method='pearson').abs()
+
+    start_time = time.perf_counter()
+    for i in range(result_df.shape[0]): # each combination of variables
+        
+        # Display time remaining
+        if (i != 0) & (i % 10 == 0): # update every 10 records
+            time_difference = (time.perf_counter() - start_time) / 10
+            start_time = time.perf_counter()
+            seconds_remaining = (result_df.shape[0] - i) * time_difference
+            minutes_remaining = int(np.floor(seconds_remaining / 60))
+            seconds_remaining = int(np.floor(seconds_remaining - (minutes_remaining * 60)))
+            
+            if minutes_remaining < 10:
+                minutes_remaining = str(minutes_remaining).zfill(2)
+            else:
+                minutes_remaining = str(minutes_remaining)
+            
+            seconds_remaining = str(seconds_remaining).zfill(2)
+            print('Time remaining: {}:{}'.format(minutes_remaining, seconds_remaining), end = '\r')
+        
+        variable_correlation = [] # empty list to store the correlations between each independent variable
+        for j in combinations(result_df.loc[i,'variables'],2): # create all possible combinations of two variables
+            if (j[0] in categorical_variables) & (j[1] in categorical_variables): # both variables are categorical
+                # Chi-square test for independence
+                # check if two categorical variables are correlated
+                result = chi2_contingency(pd.crosstab(data[j[0]], data[j[1]]))
+                if result[1] < 0.05:
+                    variable_correlation.append(1) # correlated
+                else:
+                    variable_correlation.append(0) # not correlated
+            elif (j[0] in categorical_variables) | (j[1] in categorical_variables): # one variable is categorical
+                # ANOVA test
+                # check if a categorical and numerical independent variable are correlated
+                if j[0] in categorical_variables:
+                    ols_formula = ' ~ '.join([j[1], j[0]])
+                else:
+                    ols_formula = ' ~ '.join([j[0], j[1]])
+                model = ols(formula = ols_formula, data = data).fit()
+                results = anova_lm(model, typ = 2)
+                p_value = results.loc[results.index[0],'PR(>F)']
+                if p_value < 0.05:
+                    variable_correlation.append(1) # correlated
+                else:
+                    variable_correlation.append(0) # not correlated
+            else:
+                # neither variables are categorical
+                variable_correlation.append(corr_matrix.loc[j[0], j[1]])
+                
+        correlation_list.append(variable_correlation)
+        #percent_complete += percent_multiplier # percentage complete
+        
+    
+    # iterate though lists of correlations and calculate the maximum value from each nested list
+    max_corr_list = []
+    
+    for i in correlation_list:
+        if len(i) > 0:
+            max_corr_list.append(max(i))
+        else: # single variables will have an empty list
+            max_corr_list.append(0)
+    
+    result_df['max_corr'] = max_corr_list
+    result_df = result_df[result_df['max_corr'] <= max_threshold].reset_index(drop = True).copy()
+
+    # calculate adjusted R-squared values for each variable combination
+    print('Calculating adjusted R-squared values...')
+    percent_multiplier = 100 / len(variable_list) # percent complete for each combination
+    percent_complete = 0
+    rsquared_values = []
+    categorical_variables = []
+
+    start_time = time.perf_counter() 
+    for i in range(result_df.shape[0]):
+        
+        f = result_df.loc[result_df.index[i], 'variables']
+
+        # Display time remaining
+        if (i != 0) & (i % 10 == 0): # update every 10 records
+            time_difference = (time.perf_counter() - start_time) / 10
+            start_time = time.perf_counter()
+            seconds_remaining = (result_df.shape[0] - i) * time_difference
+            minutes_remaining = int(np.floor(seconds_remaining / 60))
+            seconds_remaining = int(np.floor(seconds_remaining - (minutes_remaining * 60)))
+            
+            if minutes_remaining < 10:
+                minutes_remaining = str(minutes_remaining).zfill(2)
+            else:
+                minutes_remaining = str(minutes_remaining)
+            
+            seconds_remaining = str(seconds_remaining).zfill(2)
+            print('Time remaining: {}:{}'.format(minutes_remaining, seconds_remaining), end = '\r')
+        
+        
+        # add C() to categorical variables for formula
+        new_variables = []
+        for col in f:
+            if col in categorical_variables:
+                new_variables.append('C(' + col + ')')
+            else:
+                new_variables.append(col)    
+                
+        # calculate adjusted R-squared value for variable combination
+        ols_formula = y.name + ' ~ ' + ' + '.join(new_variables)
+        OLS = ols(formula = ols_formula, data = data)
+        model = OLS.fit()
+        rsquared_values.append(model.rsquared_adj)
+        percent_complete += percent_multiplier # percentage complete
+    
+    print('                              ') # remove last percentage from display
+        
+    # build dataframe of the variable combinations and their adjusted R-squared values
+    result_df['r_squared'] = rsquared_values
+    
+    # filter out rows with an adjusted R-squared value of less than 0
+    result_df = result_df[result_df['r_squared'] > 0].copy()
+
+    # sort results from highest adjusted R-squared value to the lowest
+    result_df = result_df.sort_values(by = ['r_squared'], ascending = False).reset_index(drop = True)
+    
+    return result_df
+```
+
+
