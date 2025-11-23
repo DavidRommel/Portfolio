@@ -1163,7 +1163,7 @@ In order to get a better indication of how much longer the processing will take,
 
 **Todo:**
 * I plan on adding a check for the maximum p-value from each of the regression results, since there is no point displaying variable combinations whose coefficients aren’t all statistically significant.
-* I also thought about the 27 variable limitation that my function currently has.  I believe this could be overcome by nesting all of the code into the for loop, that generates all of the possible variable combinations.  This way many of the potential combinations could be eliminated due to correlation between the predictor variables, significantly reducing the size of the resulting data frame, and preventing the memory overload that currently crashes the function when there are many variables.
+* I also thought about the 27 variable limitation that my function currently has.  I believe this could be overcome by nesting the code that checks for multicollinearity into the for loop that generates all of the possible variable combinations.  This way many of the potential combinations could be eliminated due to correlation between the predictor variables, significantly reducing the size of the resulting data frame, and preventing the memory overload that currently crashes the function when there are many variables.
 
 
 ```python
