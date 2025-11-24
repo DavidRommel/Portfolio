@@ -1368,7 +1368,7 @@ There was a slight error in my logic from the update yesterday.  Every 10 variab
 **Todo:**
 * Refer to the update from 2025-11-22.
    * Those items will be addressed in future updates.
-* Fine tune refresh rate for section where adjusted R-squared values are calculated.
+* Fine tune the refresh rate for section where adjusted R-squared values are calculated.
 
 ```python
 import time
