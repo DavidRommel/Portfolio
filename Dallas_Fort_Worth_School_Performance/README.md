@@ -3,21 +3,22 @@
 ### Table of Contents
 * [Introduction](#introduction)
 * [Analyzing how staffing data impacts school performance](#analyzing-how-staffing-data-impacts-school-performance)
-    * [Analyzing teacher salaries and school performance](#analyzing-teacher-salaries-and-school-performance)
-    * [Analyzing teacher-student ratio and school performance](#analyzing-teacher-student-ratio-and-school-performance)
-    * [Analyzing teachers' education and school performance](#analyzing-teachers-education-and-school-performance)
-    * [Analyzing teachers' experience and school performance](#analyzing-teachers-experience-and-school-performance)
-    * [Analyzing school size impacts school performance](#analyzing-school-size-impacts-school-performance)
+   * [Analyzing teacher salaries and school performance](#analyzing-teacher-salaries-and-school-performance)
+   * [Analyzing teacher-student ratio and school performance](#analyzing-teacher-student-ratio-and-school-performance)
+   * [Analyzing teachers' education and school performance](#analyzing-teachers-education-and-school-performance)
+   * [Analyzing teachers' experience and school performance](#analyzing-teachers-experience-and-school-performance)
+   * [Analyzing school size impacts school performance](#analyzing-school-size-impacts-school-performance)
 * [Analyzing how socioeconomic factors impact school performance](#analyzing-how-socioeconomic-factors-impact-school-performance)
-    * [Analyzing how household income diversity correlates to school performance](#analyzing-how-household-income-diversity-correlates-to-school-performance)
-    * [Analyzing how the percentage of households that earn less than \$50,000 correlates to school performance](#analyzing-how-the-percentage-of-households-that-earn-less-than-50000-correlates-to-school-performance)
-    * [Analyzing how housing prices correlates to school performance](#analyzing-how-housing-prices-correlates-to-school-performance)
-    * [Analyzing how the percentage of owners vs. renters of housing correlates to school performance](#analyzing-how-the-percentage-of-owners-vs-renters-of-housing-correlates-to-school-performance)
-    * [Analyzing how educational attainment correlates to school performance](#analyzing-how-educational-attainment-correlates-to-school-performance)
-    * [Analyzing how the percentage of married families correlates to school performance](#analyzing-how-the-percentage-of-married-families-correlates-to-school-performance)
+   * [Analyzing how household income diversity correlates to school performance](#analyzing-how-household-income-diversity-correlates-to-school-performance)
+   * [Analyzing how the percentage of households that earn less than \$50,000 correlates to school performance](#analyzing-how-the-percentage-of-households-that-earn-less-than-50000-correlates-to-school-performance)
+   * [Analyzing how housing prices correlates to school performance](#analyzing-how-housing-prices-correlates-to-school-performance)
+   * [Analyzing how the percentage of owners vs. renters of housing correlates to school performance](#analyzing-how-the-percentage-of-owners-vs-renters-of-housing-correlates-to-school-performance)
+   * [Analyzing how educational attainment correlates to school performance](#analyzing-how-educational-attainment-correlates-to-school-performance)
+   * [Analyzing how the percentage of married families correlates to school performance](#analyzing-how-the-percentage-of-married-families-correlates-to-school-performance)
 * [Multiple Regression Model](#multiple-regression-model)
-    * [Add aggregated teacher variables in attempt to improve model](#add-aggregated-teacher-variables-in-attempt-to-improve-model)
+   * [Add aggregated teacher variables in attempt to improve model](#add-aggregated-teacher-variables-in-attempt-to-improve-model)
 * [Summary](#summary)
+   * [Next steps](#next-steps)
 
 
 ### Introduction
@@ -2866,8 +2867,9 @@ The percentage of married couples in a city were **negatively** correlated with:
 * The percentage of people with an income under \$50,000
 * The percentage of people renting housing
 
-**Next Steps**  
 
+### Next steps
+---
 This model can be used to provide a less biased method of comparing school performance across cities, since it accounts for socioeconomic factors that may hinder a school from being able to achieve a high score.
 
 Focusing more on building houses greater than $500,000, and restricting the amount of new apartment complexes, could be one way to boost the high school scores in a city.  At the school level, encouraging teachers to further their education and providing them with incentives to obtain a master's degree may provide a better boost to school performance, rather than simply increasing salaries.  When hiring new teachers, hiring teachers with 11-20 years of experience seems to contribute the most to school performance.  There also appears to be no evidence that smaller class sizes result in better high school scores.
