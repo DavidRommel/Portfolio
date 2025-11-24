@@ -22,8 +22,8 @@ For each of those combinations, a regression model is created and the adjusted R
 * [Testing Function](#testing-function)
 * [Explanation of components of function](#explanation-of-components-of-function)
 * [Function update (2025-11-09)](#function-update-2025-11-09)
-* [Function Update (2025-11-23)](#function-update-(2025-11-23))
-* [Function Update (Second) (2025-11-23)](#function-update-(second)-(2025-11-23))
+* [Function Update (2025-11-23)](#function-update-2025-11-23)
+* [Function Update (Second) (2025-11-23)](#function-update-second-2025-11-23)
 
 
 ### Imports  
