@@ -6,8 +6,8 @@
 * [Testing Function](#testing-function)
 * [Explanation of components of function](#explanation-of-components-of-function)
 * [Function Update (2025-11-09)](#function-update-2025-11-09)
+* [Function Update (2025-11-22)](#function-update-2025-11-22)
 * [Function Update (2025-11-23)](#function-update-2025-11-23)
-* [Function Update (2025-11-24)](#function-update-2025-11-24)
 
 ### Introduction
 ---
@@ -1169,7 +1169,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     return result_df
 ```
 
-### Function Update (2025-11-23)
+### Function Update (2025-11-22)
 ---
 In order to get a better indication of how much longer the processing will take, I replaced the percent remaining indicator with a time remaining indicator.  The time remaining is updated every ten operations, in order to reduce the processing required for this step.  The code block calculates the time required to perform ten operations then estimates, based on how many operations are remaining, how much longer it will take.  I arbitrarily chose the number ten, however this number could probably be increased, and it would probably smooth out the time remaining more.  As it is, sometimes the time remaining will increase if the current batch of ten operations takes longer than on average, or if the previous batch was completed more quickly than an average batch.  All in all though, this seems to give a good indication of how long it will take for the processing to finish.
 
@@ -1361,9 +1361,9 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     return result_df
 ```
 
-### Function Update (2025-11-24)
+### Function Update (2025-11-23)
 ---
-There was a slight error in my logic from the previous update today.  Every 10 variable combinations can result in a different number of pairs that are checked for multicollinearity, based on the number of variables in the combinations.  I accounted for this variability in this update.  Now, instead of referring to the rows remaining in the data frame, I calculated the total number of unique pairs that can be created from all of the possible combinations.  I subtract the number of pairs processed from this number each time the time remaining updates.  This number is used to calculate the seconds remaining.  The time remaining is much more accurate with this update.  I also increased the number of records between each refresh from 10 to 1000.  On my machine about 8000 records are processed per second so there was no need to refresh so often.  I did not change any of the section where the adjusted R-squared values are calculated yet.  The refresh rate for this section may be adjusted in the next update.
+There was a slight error in my logic from the update yesterday.  Every 10 variable combinations can result in a different number of pairs that are checked for multicollinearity, based on the number of variables in the combinations.  I accounted for this variability in this update.  Now, instead of referring to the rows remaining in the data frame, I calculated the total number of unique pairs that can be created from all of the possible combinations.  I subtract the number of pairs processed from this number each time the time remaining updates.  This number is used to calculate the seconds remaining.  The time remaining is much more accurate with this update.  I also increased the number of records between each refresh from 10 to 1000.  On my machine about 8000 records are processed per second so there was no need to refresh so often.  I did not change any of the section where the adjusted R-squared values are calculated yet.  The refresh rate for this section may be adjusted in the next update.
 
 **Todo:**
 * See the previous update from today.
