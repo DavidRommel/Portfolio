@@ -13,6 +13,19 @@ For example:
 
 For each of those combinations, a regression model is created and the adjusted R-squared value is calculated, then the correlations between each of the pairs of independent variables are calculated.  This can result in exponentially longer processing times for each additional variable.  I added progress indicators to give an indication of how much time is remaining for each of those proceedures.  It would take a substantial amount of time though, to calculate the optimal independent variables for a dataset with many possible choices.  To best make use of this function, it is advised to manually reduce the number of potential independent variables to around twenty first.
 
+
+### Table of contents
+---
+* [Introduction](introduction)
+* [Imports](imports)
+* [Function code](function-code)
+* [Testing Function](testing-function)
+* [Explanation of components of function](explanation-of-components-of-function)
+* [Function update (2025-11-09)](function-update-(2025-11-09))
+* [Function Update (2025-11-23)](function-update-(2025-11-23))
+* [Function Update (Second) (2025-11-23)](function-update-(second)-(2025-11-23))
+
+
 ### Imports  
 ---
 
