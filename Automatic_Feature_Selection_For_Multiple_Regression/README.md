@@ -5,7 +5,7 @@
 * [Function code](#function-code)
 * [Testing Function](#testing-function)
 * [Explanation of components of function](#explanation-of-components-of-function)
-* [Function update (2025-11-09)](#function-update-2025-11-09)
+* [Function Update (2025-11-09)](#function-update-2025-11-09)
 * [Function Update (2025-11-23)](#function-update-2025-11-23)
 * [Function Update (2025-11-24)](#function-update-2025-11-24)
 
@@ -1009,7 +1009,7 @@ return_df
 </table>
 
 
-### Function update (2025-11-09)
+### Function Update (2025-11-09)
 ---
 My previous version of the `select_variables()` function was not as efficient as it could have been.
 * The function now calculates the correlation between the pairs of independent predictor variables **before** calculating the adjusted R-squared values.
