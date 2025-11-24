@@ -1,5 +1,27 @@
 ## Dallas-Fort Worth Area High School Performance
 
+### Table of Contents
+* [Introduction](#introduction)
+* [Analyzing how staffing data impacts school performance](#analyzing-how-staffing-data-impacts-school-performance)
+    * [Analyzing teacher salaries and school performance](#analyzing-teacher-salaries-and-school-performance)
+    * [Analyzing teacher-student ratio and school performance](#analyzing-teacher-student-ratio-and-school-performance)
+    * [Analyzing teachers' education and school performance](#analyzing-teachers-education-and-school-performance)
+    * [Analyzing teachers' experience and school performance](#analyzing-teachers-experience-and-school-performance)
+    * [Analyzing school size impacts school performance](#analyzing-school-size-impacts-school-performance)
+* [Analyzing how socioeconomic factors impact school performance](#analyzing-how-socioeconomic-factors-impact-school-performance)
+    * [Analyzing how household income diversity correlates to school performance](#analyzing-how-household-income-diversity-correlates-to-school-performance)
+    * [Analyzing how the percentage of households that earn less than \$50,000 correlates to school performance](#analyzing-how-the-percentage-of-households-that-earn-less-than-50000-correlates-to-school-performance)
+    * [Analyzing how housing prices correlates to school performance](#analyzing-how-housing-prices-correlates-to-school-performance)
+    * [Analyzing how the percentage of owners vs. renters of housing correlates to school performance](#analyzing-how-the-percentage-of-owners-vs-renters-of-housing-correlates-to-school-performance)
+    * [Analyzing how educational attainment correlates to school performance](#analyzing-how-educational-attainment-correlates-to-school-performance)
+    * [Analyzing how the percentage of married families correlates to school performance](#analyzing-how-the-percentage-of-married-families-correlates-to-school-performance)
+* [Multiple Regression Model](#multiple-regression-model)
+    * [Add aggregated teacher variables in attempt to improve model](#add-aggregated-teacher-variables-in-attempt-to-improve-model)
+* [Summary](#summary)
+
+
+### Introduction
+---
 For this case study, I attempted to identify school and socioeconomic variables that impacted high school performance scores.  I first explored variables related to the individual schools, such as data about the teachers and school size.  I then took a broader view and examined average high school performance from a city level.  I attempted to identify various socioeconomic factors that correlated with an increase or decrease in high school performance scores.
 
 My goal in all of this was to develop a multiple regression model, which utilized multiple predictor variables to accurately predict what the average high school score for a city should be.  This model could then be used to make better, less biased, comparisons between different cities, and identify those cities whose schools are under-performing, as well as those who are performing above expectations.
