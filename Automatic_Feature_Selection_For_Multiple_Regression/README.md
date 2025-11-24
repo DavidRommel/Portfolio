@@ -1253,7 +1253,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
                 minutes_remaining = str(minutes_remaining)
             
             seconds_remaining = str(seconds_remaining).zfill(2)
-            print('Time remaining: {}:{}'.format(minutes_remaining, seconds_remaining), end = '\r')
+            print('Time remaining: {}:{}'.format(minutes_remaining[:2], seconds_remaining[:2]), end = '\r')
         
         variable_correlation = [] # empty list to store the correlations between each independent variable
         for j in combinations(result_df.loc[i,'variables'],2): # create all possible combinations of two variables
@@ -1321,7 +1321,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
                 minutes_remaining = str(minutes_remaining)
             
             seconds_remaining = str(seconds_remaining).zfill(2)
-            print('Time remaining: {}:{}'.format(minutes_remaining, seconds_remaining), end = '\r')
+            print('Time remaining: {}:{}'.format(minutes_remaining[:2], seconds_remaining[:2]), end = '\r')
         
         # add C() to categorical variables for formula
         new_variables = []
