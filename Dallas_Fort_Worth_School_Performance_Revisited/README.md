@@ -181,6 +181,7 @@ I used this combined dataset to calculate the optimal variables for the multiple
 I modified the `select_variables()` function, that I explained in depth in the [Automatic Feature Selection For Multiple Regression](https://github.com/DavidRommel/Portfolio/blob/main/Automatic_Feature_Selection_For_Multiple_Regression/README.md) section of my portfolio.
 
 * For this project I wasn't interested in checking for multicollinearity between the independent predictor variables, so I removed that section.
+   * I was mostly testing applying a regression model to a Tableau dashboard and wanted as many predictor variables as possible for illustrative purposes.  I was not overly concerned about model validity for this project.
 * I also modified the function to only return combinations where all of the p-values of the coefficients were less than 0.05, and where none of the coefficients were negative.
     * Some of the combinations had negative coefficients for variables that were positively correlated with a school's overall score, which didn't make sense so I added a conditional statement to filter those out.
 * I also reversed the variable combination list so that the combinations with the greatest numbers of variables were tested first.
