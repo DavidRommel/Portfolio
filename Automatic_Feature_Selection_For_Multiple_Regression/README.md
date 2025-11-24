@@ -64,9 +64,9 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     Parameters
     ----------
     X : pandas.DataFrame
-        A dataframe consisting of The independent predictor variables
+        A dataframe consisting of the independent predictor variables
     y : pandas.Series
-        A series consisting of the dependent variable
+        A series object consisting of the dependent variable
     min_threshold : float, default: 0.4
         The minimum required correlation between an independent variable and the dependent variable
     max_threshold : float, default: 0.4
@@ -1029,9 +1029,9 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     Parameters
     ----------
     X : pandas.DataFrame
-        A dataframe consisting of The independent predictor variables
+        A dataframe consisting of the independent predictor variables
     y : pandas.Series
-        A series consisting of the dependent variable
+        A series object consisting of the dependent variable
     min_threshold : float, default: 0.4
         The minimum required correlation between an independent variable and the dependent variable
     max_threshold : float, default: 0.4
@@ -1194,9 +1194,9 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     Parameters
     ----------
     X : pandas.DataFrame
-        A dataframe consisting of The independent predictor variables
+        A dataframe consisting of the independent predictor variables
     y : pandas.Series
-        A series consisting of the dependent variable
+        A series object consisting of the dependent variable
     min_threshold : float, default: 0.4
         The minimum required correlation between an independent variable and the dependent variable
     max_threshold : float, default: 0.4
@@ -1386,9 +1386,9 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     Parameters
     ----------
     X : pandas.DataFrame
-        A dataframe consisting of The independent predictor variables
+        A dataframe consisting of the independent predictor variables
     y : pandas.Series
-        A series consisting of the dependent variable
+        A series object consisting of the dependent variable
     min_threshold : float, default: 0.4
         The minimum required correlation between an independent variable and the dependent variable
     max_threshold : float, default: 0.4
