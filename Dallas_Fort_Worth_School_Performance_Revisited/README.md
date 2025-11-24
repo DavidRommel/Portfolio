@@ -1,5 +1,5 @@
 ## Dallas-Fort Worth School Performance Revisited
-### Table of contents
+### Table of Contents
 * [Introduction](#introduction)
 * [Prepare Data](#prepare-data)
 * [Multiple Regression Model](#multiple-regression-model)
