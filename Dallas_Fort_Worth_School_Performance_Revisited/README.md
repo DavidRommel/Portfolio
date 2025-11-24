@@ -1,5 +1,14 @@
 ## Dallas-Fort Worth School Performance Revisited
+### Table of contents
+---
+* [Introduction](#introduction)
+* [Prepare Data](#prepare-data)
+* [Multiple Regression Model](#multiple-regression-model)
+* [Pivot data for Tableau](#pivot-data-for-tableau)
+* [Tableau](#tableau)
 
+### Introduction
+---
 I decided to revisit an earlier project that I completed on [Dallas-Fort Worth Area High School Performance](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance/README.md).  This time instead of focusing on the socioeconomic factors of the city, I decided to just explore variables related to a school's academic performance as a means of predicting the overall score for a school.  
 
 According to the Texas Education Agency, a lot of variables go into calculating this score.  The score accounts for how well a school improves from one year to the next, how it compares with other schools in the area, and how certain student groups are performing.  Even though I did not go quite into that amount of detail with my regression model, it was able to explain 88.7% of the variation in the overall scores of the high schools in the Dallas-Fort Worth area, using just seven variables.  
