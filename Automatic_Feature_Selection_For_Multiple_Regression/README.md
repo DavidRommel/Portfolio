@@ -1,5 +1,16 @@
 ## Automatic Feature Selection For Multiple Regression
+### Table of Contents
+* [Introduction](#introduction)
+* [Imports](#imports)
+* [Function code](#function-code)
+* [Testing Function](#testing-function)
+* [Explanation of components of function](#explanation-of-components-of-function)
+* [Function update (2025-11-09)](#function-update-2025-11-09)
+* [Function Update (2025-11-23)](#function-update-2025-11-23)
+* [Function Update (Second) (2025-11-23)](#function-update-second-2025-11-23)
 
+### Introduction
+---
 While I was working on my [Dallas-Fort Worth School Performance](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance/README.md) case study, I thought about how to devise an automated method of selecting the independent variables which would result in the highest adjusted R-squared value.  I could probably use lasso regression to accomplish this, but decided to try a brute force approach.  My function is rather CPU-intensive, since it creates regression models for each possible combination of the independent variables.
 
 For example:
@@ -12,18 +23,6 @@ For example:
     * This occurs when the code attempts to create a list of all of the possible variable combinations, before even computing anything
 
 For each of those combinations, a regression model is created and the adjusted R-squared value is calculated, then the correlations between each of the pairs of independent variables are calculated.  This can result in exponentially longer processing times for each additional variable.  I added progress indicators to give an indication of how much time is remaining for each of those proceedures.  It would take a substantial amount of time though, to calculate the optimal independent variables for a dataset with many possible choices.  To best make use of this function, it is advised to manually reduce the number of potential independent variables to around twenty first.
-
-
-### Table of contents
----
-* [Introduction](#automatic-feature-selection-for-multiple-regression)
-* [Imports](#imports)
-* [Function code](#function-code)
-* [Testing Function](#testing-function)
-* [Explanation of components of function](#explanation-of-components-of-function)
-* [Function update (2025-11-09)](#function-update-2025-11-09)
-* [Function Update (2025-11-23)](#function-update-2025-11-23)
-* [Function Update (Second) (2025-11-23)](#function-update-second-2025-11-23)
 
 
 ### Imports  
