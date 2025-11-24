@@ -1366,7 +1366,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
 There was a slight error in my logic from the update yesterday.  Every 10 variable combinations can result in a different number of pairs that are checked for multicollinearity, based on the number of variables in the combinations.  I accounted for this variability in this update.  Now, instead of referring to the rows remaining in the data frame, I calculated the total number of unique pairs that can be created from all of the possible combinations.  I subtract the number of pairs processed from this number each time the time remaining updates.  This number is used to calculate the seconds remaining.  The time remaining is much more accurate with this update.  I also increased the number of records processed between each refresh from 10 to 1000.  On my machine about 8000 records are processed per second so there was no need to refresh so often.  I did not change any of the section where the adjusted R-squared values are calculated yet.  The refresh rate for this section may be adjusted in the next update.
 
 **Todo:**
-* See the previous update from today.
+* Refer to the update from 2025-11-22.
    * Those items will be addressed in future updates.
 * Fine tune refresh rate for section where adjusted R-squared values are calculated.
 
