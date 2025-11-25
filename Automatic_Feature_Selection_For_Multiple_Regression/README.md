@@ -85,7 +85,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     
     # Drop independent variables that are NOT numerical or categorical
     for col in X.columns:
-        if (not isinstance(X[col].dtype, pd.CategoricalDtype)) & (not is_numeric_dtype(df[col])):
+        if (not isinstance(X[col].dtype, pd.CategoricalDtype)) & (not is_numeric_dtype(X[col])):
             X = X.drop(columns = [col])            
             print('WARNING: Independent variable \'{}\' was not numerical or categorical so it was dropped'.format(col))
 
@@ -530,7 +530,7 @@ if (not is_numeric_dtype(y)):
 
 # Drop independent variables that are NOT numerical or categorical
 for col in X.columns:
-    if (not isinstance(X[col].dtype, pd.CategoricalDtype)) & (not is_numeric_dtype(df[col])):
+    if (not isinstance(X[col].dtype, pd.CategoricalDtype)) & (not is_numeric_dtype(X[col])):
         X = X.drop(columns = [col])            
         print('WARNING: Independent variable \'{}\' was not numerical or categorical so it was dropped'.format(col))
 
@@ -1050,7 +1050,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     
     # Drop independent variables that are NOT numerical or categorical
     for col in X.columns:
-        if (not isinstance(X[col].dtype, pd.CategoricalDtype)) & (not is_numeric_dtype(df[col])):
+        if (not isinstance(X[col].dtype, pd.CategoricalDtype)) & (not is_numeric_dtype(X[col])):
             X = X.drop(columns = [col])            
             print('WARNING: Independent variable \'{}\' was not numerical or categorical so it was dropped'.format(col))
 
@@ -1215,7 +1215,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     
     # Drop independent variables that are NOT numerical or categorical
     for col in X.columns:
-        if (not isinstance(X[col].dtype, pd.CategoricalDtype)) & (not is_numeric_dtype(df[col])):
+        if (not isinstance(X[col].dtype, pd.CategoricalDtype)) & (not is_numeric_dtype(X[col])):
             X = X.drop(columns = [col])            
             print('WARNING: Independent variable \'{}\' was not numerical or categorical so it was dropped'.format(col))
 
@@ -1407,7 +1407,7 @@ def select_variables(X, y, min_threshold = 0.4, max_threshold = 0.4):
     
     # Drop independent variables that are NOT numerical or categorical
     for col in X.columns:
-        if (not isinstance(X[col].dtype, pd.CategoricalDtype)) & (not is_numeric_dtype(df[col])):
+        if (not isinstance(X[col].dtype, pd.CategoricalDtype)) & (not is_numeric_dtype(X[col])):
             X = X.drop(columns = [col])            
             print('WARNING: Independent variable \'{}\' was not numerical or categorical so it was dropped'.format(col))
 
