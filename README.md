@@ -11,6 +11,8 @@ Welcome to my data analytics portfolio.  Here you will find projects demonstrati
 --- 
 
 #### Predictive Analytics & Machine Learning
+* *Analyzing Pitcher Predictability For The Texas Rangers (In Progress)*
+  > Python, Supervised Machine Learning, Decision Trees, Random Forests, Gradient Boosting
 * *Dallas-Fort Worth School Clustering (In Progress)*
   > Python, Unsupervised Machine Learning, K-Means
 * [Dallas-Fort Worth School Performance Revisited](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance_Revisited/README.md)
