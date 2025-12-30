@@ -5,4 +5,5 @@ Instead of explaining this project alongside the code, like I did with the previ
 **Click the following image to view the video:**
 [![Video Thumbnail](Images/video_screenshot.jpg)](https://drive.google.com/file/d/1fBALPVTILyRJM0R0LwsGBzB1XPgFSUr_/view?usp=sharing)
 
-**To view the code for this project click the following link:**
+**To view the code for this project click the following link:**  
+[Markdown For Jupyter Notebook](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_High_School_Clustering_Analysis/Notebook/README.md)
