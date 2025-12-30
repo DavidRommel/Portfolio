@@ -5,4 +5,7 @@ Instead of explaining this project alongside the code, like I did with the previ
 **Click the following image to view the video:**
 [![Video Thumbnail](Images/video_screenshot.jpg)](https://drive.google.com/file/d/1fBALPVTILyRJM0R0LwsGBzB1XPgFSUr_/view?usp=sharing)
 
+<iframe src="https://drive.google.com/file/d/1fBALPVTILyRJM0R0LwsGBzB1XPgFSUr_/preview" width="640" height="480"></iframe>
+
+
 **To view the code for this project click the following link:**
