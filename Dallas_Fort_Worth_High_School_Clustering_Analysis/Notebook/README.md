@@ -592,22 +592,6 @@ pd.DataFrame(df_subset_scaled, columns = df_subset.columns).head(10)
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -680,8 +664,6 @@ pd.DataFrame(df_subset_scaled, columns = df_subset.columns).head(10)
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 #### Determine optimal number of clusters
@@ -870,22 +852,6 @@ lewisville_cluster_sorted.tail(10).loc[:,['campus',
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -980,8 +946,6 @@ lewisville_cluster_sorted.tail(10).loc[:,['campus',
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 
