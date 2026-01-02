@@ -5,8 +5,9 @@ Welcome to my data analytics portfolio.  Here you will find projects demonstrati
 * [2025 Resume - David Rommel_v5.pdf](https://github.com/DavidRommel/Portfolio/blob/main/Resume/2025%20Resume%20-%20David%20Rommel_v5.pdf)
 
 #### Certificates
+* [Google Advanced Data Analytics](https://coursera.org/share/cf2217e0e5686ca778ac6ab7796cb8bb)
 * [Google Data Analytics Professional Certificate](https://coursera.org/share/9c061569559f37f63ce223f63604dcdf)
-* *Google Advanced Data Analytics (7 of 8 courses complete)*
+
 
 --- 
 
