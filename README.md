@@ -2,7 +2,7 @@
 Welcome to my data analytics portfolio.  Here you will find projects demonstrating my expertise in data manipulation and querying with **SQL**, statistical analysis and modeling with **R**, advanced statistical modeling, predictive analytics, and machine learning with **Python**, dynamic data visualization and dashboard creation using **Tableau**, and automation of business processes with **VBA**.
 
 #### Resume
-* [2025 Resume - David Rommel_v5.pdf](https://github.com/DavidRommel/Portfolio/blob/main/Resume/2025%20Resume%20-%20David%20Rommel_v5.pdf)
+* [2026 Resume - David Rommel.pdf](https://github.com/DavidRommel/Portfolio/blob/main/Resume/2026%20Resume%20-%20David%20Rommel.pdf)
 
 #### Certificates
 * [Google Advanced Data Analytics](https://coursera.org/share/cf2217e0e5686ca778ac6ab7796cb8bb)
