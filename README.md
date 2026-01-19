@@ -5,7 +5,6 @@ Welcome to my data analytics portfolio.  Here you will find projects demonstrati
 * [2026 Resume - David Rommel.pdf](https://github.com/DavidRommel/Portfolio/blob/main/Resume/2026%20Resume%20-%20David%20Rommel.pdf)
 
 #### Certificates
-* *Microsoft Power BI Data Analyst Professional Certificate (0 of 8 courses complete)*
 * [Google Advanced Data Analytics](https://coursera.org/share/cf2217e0e5686ca778ac6ab7796cb8bb)
 * [Google Data Analytics Professional Certificate](https://coursera.org/share/9c061569559f37f63ce223f63604dcdf)
 
