@@ -1,5 +1,5 @@
 ### Data Analytics Portfolio
-Welcome to my data analytics portfolio.  Here you will find projects demonstrating my expertise in data manipulation and querying with **SQL**, statistical analysis and modeling with **R**, advanced statistical modeling, predictive analytics, and machine learning with **Python**, dynamic data visualization and dashboard creation using **Tableau**, and automation of business processes with **VBA**.
+Welcome to my data analytics portfolio.  Here you will find projects demonstrating my expertise in data manipulation and querying with **SQL**, statistical analysis and modeling with **R**, advanced statistical modeling, predictive analytics, and machine learning with **Python**, dynamic data visualization and dashboard creation using **Tableau** and **Power BI**, and automation of business processes with **VBA**.
 
 #### Resume
 * [2026 Resume - David Rommel.pdf](https://github.com/DavidRommel/Portfolio/blob/main/Resume/2026%20Resume%20-%20David%20Rommel.pdf)
