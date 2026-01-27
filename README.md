@@ -12,24 +12,24 @@ Welcome to my data analytics portfolio.  Here you will find projects demonstrati
 --- 
 
 #### Predictive Analytics & Machine Learning
-* *McDonald’s Comparative Pricing Analysis (Gathering Data)*
-  > Power BI
 * *Analyzing Pitcher Predictability For The Texas Rangers (In Progress)*
   > Python, Supervised Machine Learning, Decision Trees, Random Forests, Gradient Boosting
 * [Dallas-Fort Worth High School Clustering Analysis](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_High_School_Clustering_Analysis/README.md)
   > Python, Unsupervised Machine Learning, K-Means
-* [Dallas-Fort Worth School Performance Revisited](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance_Revisited/README.md)
-  > Tableau, Python, Multiple Regression
 * [Automatic Feature Selection For Multiple Regression](https://github.com/DavidRommel/Portfolio/blob/main/Automatic_Feature_Selection_For_Multiple_Regression/README.md)
   > Python, Multiple Regression
 * [Dallas-Fort Worth School Performance](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance/README.md)
   > Python, Multiple Regression
 
+#### Interactive Dashboards
+* *McDonald’s Comparative Pricing Analysis (Gathering Data)*
+  > Power BI
+* [Dallas-Fort Worth School Performance Revisited](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance_Revisited/README.md)
+  > Tableau, Python, Multiple Regression
 
 #### Exploratory Data Analysis
 * [openFDA Food Recalls](https://github.com/DavidRommel/Portfolio/tree/main/Food_Recall_Exploratory_Data_Analysis//README.md)
   > R
-
 
 #### VBA Macros
 * [Sheath Name Checker](https://github.com/DavidRommel/Portfolio/blob/main/Sheath_Name_Checker/README.md)
