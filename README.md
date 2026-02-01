@@ -36,4 +36,4 @@ Welcome to my data analytics portfolio.  Here you will find projects demonstrati
 
 
 #### Notes
-* [Data Analysis Notes Repository](https://github.com/DavidRommel/Notes)
+* [Data Analytics Notes Repository](https://github.com/DavidRommel/Notes)
