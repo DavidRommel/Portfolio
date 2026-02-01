@@ -22,8 +22,6 @@ Welcome to my data analytics portfolio.  Here you will find projects demonstrati
   > Python, Multiple Regression
 
 #### Interactive Dashboards
-* *McDonald’s Comparative Pricing Analysis (Data Acquisition)*
-  > Power BI
 * [Dallas-Fort Worth School Performance Revisited](https://github.com/DavidRommel/Portfolio/blob/main/Dallas_Fort_Worth_School_Performance_Revisited/README.md)
   > Tableau, Python, Multiple Regression
 
