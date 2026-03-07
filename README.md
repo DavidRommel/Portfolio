@@ -38,5 +38,5 @@ Welcome to my data analytics portfolio.  Here you will find projects demonstrati
 
 #### Other
 * [Computer Aided Design Portfolio](https://github.com/DavidRommel/Portfolio/blob/0b21c515442a751acd76178fa68769a8f561914e/Computer_Aided_Design/2023%20CAD%20Portfolio%20-%20David%20Rommel_v2.pdf)
-  > Solid Edge, Solid Works, AutoCad, AutoLISP, KiCad, Sketchup
+  > Solid Edge, SolidWorks, AutoCad, AutoLISP, KiCad, Sketchup
   
