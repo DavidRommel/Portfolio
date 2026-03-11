@@ -25,7 +25,7 @@ Welcome to my data analytics portfolio.  Here you will find projects demonstrati
   > Tableau, Python, Multiple Regression
 
 #### Exploratory Data Analysis
-* [openFDA Food Recalls](https://github.com/DavidRommel/Portfolio/tree/main/Food_Recall_Exploratory_Data_Analysis//README.md)
+* [openFDA Food Recalls](https://github.com/DavidRommel/Portfolio/blob/main/Food_Recall_Exploratory_Data_Analysis/README.md)
   > R
 
 #### VBA Macros
