@@ -1,4 +1,5 @@
 ## Fast Food Restaurant Analysis
+
 ### Table of Contents
 * [Overview](#overview)
 * [Semantic Model](#semantic-model)
