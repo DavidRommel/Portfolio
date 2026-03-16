@@ -1,3 +1,11 @@
+## Fast Food Restaurant Analysis
+### Table of Contents
+* [Overview](#overview)
+* [Semantic Model](semantic-model)
+* [Data Analysis Expressions (DAX)](#data-analysis-expressions-dax)
+	* [Bayesian Adjusted Rating](bayesian-adjusted-rating)
+ 	* [Weighted Quality Index](weighted-quality-index)
+
 ### Overview
 I created this dashboard to assist in determining healthy items to purchase at nearby fast food restaurants.  Below is the initial page that loads when the report is opened.  I collected data on fifteen different fast food restaurants, which I occasionally frequent, and only collected data on their main products.  I did not include combos, meals, sides, or breakfast menu items.  My goal in this analysis was to be able to compare the overall healthiness of the food at the different locations, as well as be able to dive deeper into the individual locations and examine their products in depth.
 
