@@ -18,6 +18,7 @@
 * [Report Interactivity](#report-interactivity)
 
 ### Overview
+---
 I created this dashboard to assist in determining healthy items to purchase at nearby fast food restaurants.  Below is the initial page that loads when the report is opened.  I collected data on fifteen different fast food restaurants, which I occasionally frequent, and only collected data on their main products.  I did not include combos, meals, sides, or breakfast menu items.  My goal in this analysis was to be able to compare the overall healthiness of the food at the different locations, as well as be able to dive deeper into the individual locations and examine their products in depth.
 
 ![](Images/01.JPG)
@@ -90,6 +91,7 @@ I then multiplied the Weighted Quality Index by the Net Health Score and the Hea
 
 
 ### Semantic Model
+---
 Since I collected all of the data for this project and created the tables in Excel, I didn't need to modify the data in Power Query once it was imported. I mostly just promoted headers, since the data was exported as comma-separated values files, and changed data types.  Below is the model that I created for this project.  I probably could have combined the fact tables and avoided the one to one relationships.  Combining the Google and Location tables would have allowed me to use a single cross-filter direction instead of having to use Both.  The Metric table was a parameter field that I created to allow the user to change the metric being used for the different visualizations on the report pages.
 
 ![](Images/12.JPG)
@@ -97,6 +99,7 @@ Since I collected all of the data for this project and created the tables in Exc
 <br/>
 
 ### Data Analysis Expressions (DAX)
+---
 I had difficulty creating DAX measures for the Bayesian Adjusted Rating and the Weighted Quality Index.  I think the issue was due to the cross filter directions being set to both between the Google, Location, and Product tables.  In the end, and since the Google table was only fifteen rows long, I opted to use calculated columns for those metrics instead of measures.
 
 <br/>
@@ -300,7 +303,7 @@ AVERAGEX(
 <br />
 
 ### Report Interactivity
-
+---
 To enable the help pop-up and the ability to toggle between different visualizations, I created different bookmarks that hide or show various elements.
 
 ![](Images/13.JPG)
