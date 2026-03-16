@@ -222,6 +222,7 @@ RETURN
     SelectedName & " vs. Popularity"
 ```
 <br />
+
 ```dax
 Top 10 Title = 
 VAR SelectedName = MAX('Metric'[Metric])
