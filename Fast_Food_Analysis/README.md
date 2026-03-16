@@ -1,54 +1,54 @@
 ### Overview
 I created this dashboard to assist in determining healthy items to purchase at nearby fast food restaurants.  Below is the initial page that loads when the report is opened.  I collected data on fifteen different fast food restaurants, which I occasionally frequent, and only collected data on their main products.  I did not include combos, meals, sides, or breakfast menu items.  My goal in this analysis was to be able to compare the overall healthiness of the food at the different locations, as well as be able to dive deeper into the individual locations and examine their products in depth.
 
-![](Images/01.jpg)
+![](Images/01.JPG)
 
 <br/>
 There is a slicer at the top to determine which metric to analyze the different locations and products by.  I will explain these metrics more in depth later, but essentially **Net Health Score** refers to how healthy the product is, **Health Value Index** takes into account the price of the product and is basically how much health value you get for your money.  The two weighted metrics factor in the popularity of the restaurant into the two base metrics.
 
-![](Images/02.jpg)
+![](Images/02.JPG)
 
 <br/>
 There are two other slicers to filter the products by food category as well as price.
 
-![](Images/03.jpg)
+![](Images/03.JPG)
 
 <br/>
 Below the filters is where the user can view aggregated information for the different locations.  In the map the bubble size indicates the average metric for the different restaurants.  Bookmarks are utilized so that the user can toggle between displaying the data as a map or as a chart.
 
-![](Images/04a.jpg)
-![](Images/04b.jpg)
+![](Images/04a.JPG)
+![](Images/04b.JPG)
 
 <br/>
 When the user selects a location, the drill through button becomes active and the user can view detailed nutrition information for the restaurant by clicking the button.
 
-![](Images/05.jpg)
+![](Images/05.JPG)
 
 <br/>
 I included a scatter plot to display the correlation between a restaurants popularity and the different metrics.  Each of the metrics shows a positive correlation with the restaurants popularity, indicating that more popular restaurants typically have healthier food on average.
 
-![](Images/06.jpg)
+![](Images/06.JPG)
 
 <br/>
 To the right of the scatter plot is a histogram which shows the counts of the prices, grouped into one-dollar bin sizes.  This allows the user to quickly filter the data by a particular price range.
 
-![](Images/07.jpg)
+![](Images/07.JPG)
 
 <br/>
 At the bottom left the user can view the top 10 products ranked by the selected metric, as either a table or a chart.  All of the filters affect these visualizations, so for instance if a particular food category and price range was selected, it would display the top 10 products that satisfy those filters.
 
-![](Images/08a.jpg)
-![](Images/08b.jpg)
+![](Images/08a.JPG)
+![](Images/08b.JPG)
 
 <br/>
 Clicking the help icon in the lower left of the screen displays an overlay describing each of the features in the report.
 
-![](Images/09.jpg)
+![](Images/09.JPG)
 
 <br/>
 When the user selects a location and click the drill through button, a detailed product menu appears so that the user can view nutrition information and analyze metrics for all items on the menu.  In addition to the same filters that appear on the main report page, the detailed product view page also includes information on the average price, the locations score on the selected metric, and how the restaurant ranks among the other restaurants on the selected metric.
 
-![](Images/10.jpg)
+![](Images/10.JPG)
 
 <br/>
 
@@ -65,7 +65,7 @@ Since I didn’t want the weighted scores to ignore the underlying metrics I the
 
 I then multiplied the Weighted Quality Index by the Net Health Score and the Health Value Index to obtain the **Weighted Net Health Score** and the **Weighted Health Value Index** metrics.
 
-![](Images/11.jpg)
+![](Images/11.JPG)
 
 <br/>
 
@@ -73,7 +73,7 @@ I then multiplied the Weighted Quality Index by the Net Health Score and the Hea
 ### Semantic Model
 Since I collected all of the data for this project and created the tables in Excel, I didn't need to modify the data in Power Query once it was imported. I mostly just promoted headers, since the data was exported as comma-separated values files, and changed data types.  Below is the model that I created for this project.  I probably could have combined the fact tables and avoided the one to one relationships.  Combining the Google and Location tables would have allowed me to use a single cross-filter direction instead of having to use Both.  The Metric table was a parameter field that I created to allow the user to change the metric being used for the different visualizations on the report pages.
 
-![](Images/12.jpg)
+![](Images/12.JPG)
 
 <br/>
 
@@ -284,12 +284,12 @@ AVERAGEX(
 
 To enable the help pop-up and the ability to toggle between different visualizations, I created different bookmarks that hide or show various elements.
 
-![](Images/13.jpg)
+![](Images/13.JPG)
 
 I added the Location field to the Drill through bucket on the Nutrition Information page to allow users to drill through to that page to view the detailed product information for the location.
 
-![](Images/14.jpg)
+![](Images/14.JPG)
 
 For the histogram, I created a new group for the Price field and grouped the prices into Bin sizes of one dollar.
 
-![](Images/15.jpg)
+![](Images/15.JPG)
